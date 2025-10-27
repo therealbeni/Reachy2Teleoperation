@@ -1,0 +1,3 @@
+This package is a derivative of the Creator Kit: Puzzle package - https://assetstore.unity.com/packages/templates/tutorials/creator-kit-puzzle-149311
+It is licensed under the Standard Unity Asset Store EULA - https://unity3d.com/legal/as_terms
+END-USERS shall not be entitled to distribute or transfer in any way (including, without, limitation by way of sublicense) the Assets in any other way than as integrated components of electronic applications and digital media or in supporting physical marketing materials
