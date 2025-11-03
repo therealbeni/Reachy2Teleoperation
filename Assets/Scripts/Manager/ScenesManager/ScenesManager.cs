@@ -17,7 +17,10 @@ namespace TeleopReachy
 
         void Start()
         {
-            SceneManager.LoadScene("ConnectionScene", LoadSceneMode.Additive);
+            //SceneManager.LoadScene("ConnectionScene", LoadSceneMode.Additive);
+            SceneManager.LoadScene("MenuScene", LoadSceneMode.Additive);
+            Debug.Log("✅ MenuScene loaded!");
+
 
             EventManager.StartListening(EventNames.QuitApplication, QuitApplication);
 
@@ -29,6 +32,8 @@ namespace TeleopReachy
 
             EventManager.StartListening(EventNames.EnterTeleoperationScene, LoadTeleoperationSceneAndUnloadMirrorScene);
             EventManager.StartListening(EventNames.QuitTeleoperationScene, UnloadTeleoperationSceneAndLoadMirrorScene);
+            EventManager.StartListening(EventNames.EnterSafetyScene, LoadSafetySceneEndUnloadMenuScene);
+            EventManager.StartListening(EventNames.EnterConnectionScene, LoadConnectionSceneEndUnloadSafetyScene);
 
             EventManager.StartListening(EventNames.ShowXRay, ShowXRay);
             EventManager.StartListening(EventNames.HideXRay, HideXRay);
@@ -43,6 +48,18 @@ namespace TeleopReachy
         private void UnloadRobotDataScene()
         {
             SceneManager.UnloadSceneAsync("RobotDataScene");
+        }
+
+        private void LoadSafetySceneEndUnloadMenuScene()
+        {
+            SceneManager.UnloadSceneAsync("MenuScene");
+            LoadSafetyScene();
+        }
+
+        private void LoadConnectionSceneEndUnloadSafetyScene()
+        {
+            SceneManager.UnloadSceneAsync("SafetyScene");
+            LoadConnectionScene();
         }
 
         private void LoadConnectionSceneEndUnloadMirrorScene()
@@ -62,6 +79,15 @@ namespace TeleopReachy
             userInput.SetActive(false);
             userTracker.SetActive(false);
             SceneManager.LoadScene("ConnectionScene", LoadSceneMode.Additive);
+        }
+
+        private void LoadSafetyScene()
+        {
+            Debug.Log("Loading Safety Scene");
+            ground.SetActive(true);
+            userInput.SetActive(false);
+            userTracker.SetActive(false);
+            SceneManager.LoadScene("SafetyScene", LoadSceneMode.Additive);
         }
 
         private void UnloadConnectionSceneAndLoadMirrorScene()

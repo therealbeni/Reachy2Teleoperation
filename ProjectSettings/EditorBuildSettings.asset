@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/BaseScene.unity
     guid: 36d1a24d044762443a31f82a62f59b55
   - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: 3971aaafc94007b43b112041d8854642
+  - enabled: 1
+    path: Assets/Scenes/SafetyScene.unity
+    guid: e98397d2589177a458b59f4c3537cfbd
+  - enabled: 1
     path: Assets/Scenes/RobotDataScene.unity
     guid: a19e8d80e6185a2479e38bb3a885bc86
   - enabled: 1
@@ -33,6 +39,6 @@ EditorBuildSettings:
     path: Assets/UnitTests/Scenes/Test_GaelleGhost/Test_GaelleGhostTeleoperationScene.unity
     guid: 04a2f10131efbb849866e35c58c45a82
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 589d8644caa0c3346b25d2039890e4f6, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b891d9ddf6ea98f4096d737588da18cf, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: d83ad21f2947fb24c966316230f20172, type: 2}
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1c128629e5eaa074297f9c19b814d9c4, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 78b607dc7e3ef3243bf108c9070f83f7, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 854e96f21f820cd43ae0c2e0da4c50c8, type: 2}

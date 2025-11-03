@@ -8,10 +8,12 @@ namespace TeleopReachy
     public enum EventNames
     {
         EnterConnectionScene,
+        EnterSafetyScene,
         EnterMirrorScene,
         EnterTeleoperationScene,
 
         QuitConnectionScene,
+        QuitSafetyScene,
         QuitMirrorScene,
         QuitTeleoperationScene,
         QuitApplication,
