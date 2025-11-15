@@ -8,15 +8,10 @@ namespace TeleopReachy
     public enum EventNames
     {
         EnterConnectionScene,
-        EnterSafetyScene,
         EnterMirrorScene,
         EnterTeleoperationScene,
-        EnterConnectionFromSafetyScene, //dont overwrite, put another one for tabletopop
-        EnterMenuFromConnectionScene,
-        EnterMenuFromSafetyScene,
 
         QuitConnectionScene,
-        QuitSafetyScene,
         QuitMirrorScene,
         QuitTeleoperationScene,
         QuitApplication,
@@ -25,8 +20,22 @@ namespace TeleopReachy
         MirrorSceneLoaded,
         TeleoperationSceneLoaded,
 
+        // --- NEW for your menu/safety flow ---
+        EnterSafetyDanceAfterReachyScene,   // Menu -> SafetySceneDanceReachy
+        EnterSafetyTabletopScene,           // Menu -> SafetySceneTabletop
+        EnterSafetyDanceWithReachyScene,    // Menu -> SafetyScene (Dance teleop)
+        EnterTabletopMirrorScene,           // SafetyTabletop -> TabletopMirrorScene
+        EnterDanceMirrorScene,              // SafetyScene -> DanceMirrorScene
+                                            // --- end NEW ---
+
+
+        // new navigation events
+
+
+        EnterMenuFromSafetyScene,
         ShowXRay,
         HideXRay,
+
         HeadsetRemoved,
         HeadsetReset,
         LeftControllerTrackingLost,

@@ -664,7 +664,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DWR Safety Instructions
+  m_Text: DAR Safety Instructions
 --- !u!222 &892382220
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1784712662}
-        m_TargetAssemblyTypeName: SafetyUISceneDanceTeleop, Assembly-CSharp
+        m_TargetAssemblyTypeName: SafetyUISceneDanceAfterReachy, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
@@ -1246,9 +1246,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1784712662}
-        m_TargetAssemblyTypeName: SafetyDanceTeleopUI, Assembly-CSharp
-        m_MethodName: ContinueToDanceMirror
+      - m_Target: {fileID: 1784712660}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: GoToConnectionFromSafety
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1386,7 +1386,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1784712659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f82e8473647b5c4798fef4303a0dcd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aeba7ad476b4df42b95c62ac1f860cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2020319194

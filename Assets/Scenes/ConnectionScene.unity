@@ -4292,10 +4292,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 919355923}
-        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: GoToMenuFromConnection
-        m_Mode: 1
+      - m_Target: {fileID: 6881286472017008626}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8252,7 +8252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu
+  m_Text: Quit
 --- !u!222 &2037814051
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9660,5 +9660,5 @@ SceneRoots:
   - {fileID: 325904307}
   - {fileID: 509571145}
   - {fileID: 385994908818905087}
-  - {fileID: 1025611271}
   - {fileID: 919355924}
+  - {fileID: 1025611271}

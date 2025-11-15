@@ -653,7 +653,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_FontSize: 70
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -664,7 +664,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DWR Safety Instructions
+  m_Text: TOPOP Safety Instructions
 --- !u!222 &892382220
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1784712662}
-        m_TargetAssemblyTypeName: SafetyUISceneDanceTeleop, Assembly-CSharp
+        m_TargetAssemblyTypeName: SafetyUISceneTabletop, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
@@ -1247,8 +1247,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1784712662}
-        m_TargetAssemblyTypeName: SafetyDanceTeleopUI, Assembly-CSharp
-        m_MethodName: ContinueToDanceMirror
+        m_TargetAssemblyTypeName: SafetyTabletopUI, Assembly-CSharp
+        m_MethodName: ContinueToTabletopMirror
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1386,7 +1386,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1784712659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f82e8473647b5c4798fef4303a0dcd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b07f9b60cb9db44a806184ad81ccdf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2020319194
