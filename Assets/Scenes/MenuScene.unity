@@ -3610,8 +3610,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TeleopReachy.ConnectionManager, Assembly-CSharp
+      - m_Target: {fileID: 1784712660}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: QuitApplication
         m_Mode: 1
         m_Arguments:

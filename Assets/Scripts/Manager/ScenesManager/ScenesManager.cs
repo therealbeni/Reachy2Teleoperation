@@ -33,10 +33,29 @@ namespace TeleopReachy
             EventManager.StartListening(EventNames.EnterTeleoperationScene, LoadTeleoperationSceneAndUnloadMirrorScene);
             EventManager.StartListening(EventNames.QuitTeleoperationScene, UnloadTeleoperationSceneAndLoadMirrorScene);
             EventManager.StartListening(EventNames.EnterSafetyScene, LoadSafetySceneEndUnloadMenuScene);
-            EventManager.StartListening(EventNames.EnterConnectionScene, LoadConnectionSceneEndUnloadSafetyScene);
+            EventManager.StartListening(EventNames.EnterConnectionFromSafetyScene, LoadConnectionSceneEndUnloadSafetyScene);
+
+            EventManager.StartListening(EventNames.EnterMenuFromSafetyScene, LoadMenuSceneAndUnloadSafetyScene);
+
+            EventManager.StartListening(EventNames.EnterMenuFromConnectionScene, LoadMenuSceneAndUnloadConnectionScene);
 
             EventManager.StartListening(EventNames.ShowXRay, ShowXRay);
             EventManager.StartListening(EventNames.HideXRay, HideXRay);
+        }
+
+
+
+
+        private void LoadMenuSceneAndUnloadConnectionScene()
+        {
+            SceneManager.UnloadSceneAsync("ConnectionScene");
+            SceneManager.LoadScene("MenuScene", LoadSceneMode.Additive);
+        }
+
+        private void LoadMenuSceneAndUnloadSafetyScene()
+        {
+            SceneManager.UnloadSceneAsync("SafetyScene");
+            SceneManager.LoadScene("MenuScene", LoadSceneMode.Additive);
         }
 
         void QuitApplication()

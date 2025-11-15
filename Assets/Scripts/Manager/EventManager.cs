@@ -11,6 +11,9 @@ namespace TeleopReachy
         EnterSafetyScene,
         EnterMirrorScene,
         EnterTeleoperationScene,
+        EnterConnectionFromSafetyScene, //dont overwrite, put another one for tabletopop
+        EnterMenuFromConnectionScene,
+        EnterMenuFromSafetyScene,
 
         QuitConnectionScene,
         QuitSafetyScene,
