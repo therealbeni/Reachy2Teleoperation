@@ -10952,7 +10952,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Have fun with virtual Reachy!
+  m_Text: Have fun with virtual Reachy! (DWR)
 --- !u!222 &1357602189
 CanvasRenderer:
   m_ObjectHideFlags: 0
