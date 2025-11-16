@@ -3,11 +3,9 @@ using TeleopReachy;
 
 public class SafetyUISceneDanceAfterReachy : MonoBehaviour
 {
-    public void ContinueToGameOrPlaceholder()
+    public void ContinueToPasstrough()
     {
-        // This remains a placeholder, per your design.
-        Debug.Log("Add scene for dance after reachy stuff");
-        //EventManager.TriggerEvent(EventNames.EnterMirrorScene);
+        EventManager.TriggerEvent(EventNames.EnterPasstroughFromSafetyScene);
     }
 
     public void BackToMenu()

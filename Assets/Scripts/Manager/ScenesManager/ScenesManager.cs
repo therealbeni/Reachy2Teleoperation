@@ -38,6 +38,9 @@ namespace TeleopReachy
         private const string TELEOP_TABLETOP = "TabletopTeleoperationScene";     // Mode 2 teleop
         private const string TELEOP_DANCE = "DanceTeleoperationScene";        // Mode 3 teleop
 
+        // Dance after Reachy Scene
+        private const string DANCE_AFTER_REACHY_SCENE = "DanceAfterReachyScene"; // Mode 1 Dance after Reachy Scene
+
         // ---------------------------------------------------------------------
         // Lifecycle
         // ---------------------------------------------------------------------
@@ -63,9 +66,10 @@ namespace TeleopReachy
             EventManager.StartListening(EventNames.EnterSafetyDanceWithReachyScene, LoadSafetyDanceTeleopEndUnloadMenu);
 
             // Safety → Mirror
-            // Mode 1: DanceAfterReachy (placeholder, no game scene yet)
-            EventManager.StartListening(EventNames.EnterMirrorScene, UnloadSafetyDanceAfterReachyAndPlaceholder);
+            // Mode 1: DanceAfterReachy 
+            EventManager.StartListening(EventNames.EnterPasstroughFromSafetyScene, UnloadSafetyAndLoadDanceAfterReachy);
 
+    
             // Mode 2: Tabletop → TabletopMirrorScene
             EventManager.StartListening(EventNames.EnterTabletopMirrorScene, UnloadSafetyTabletopAndLoadTabletopMirror);
 
@@ -211,11 +215,13 @@ namespace TeleopReachy
         // Safety -> Mirror
         // --------------------------------------------------------------------
 
-        // MODE 1: DanceAfterReachy – currently only logs; no real game/mirror yet.
-        private void UnloadSafetyDanceAfterReachyAndPlaceholder()
+        // MODE 1: DanceAfterReachy
+        private void UnloadSafetyAndLoadDanceAfterReachy()
         {
-            Debug.Log("[ScenesManager] Mode 1 (DanceAfterReachy) next scene not implemented yet.");
-            // When you have a follow-up scene, implement it here.
+            UnloadSceneIfLoaded(SAFETY_DANCE_AFTER_REACHY);
+            // TODO: Check if set tracking needs to be enabled here.
+            if (!SceneManager.GetSceneByName(DANCE_AFTER_REACHY_SCENE).isLoaded)
+                SceneManager.LoadScene(DANCE_AFTER_REACHY_SCENE, LoadSceneMode.Additive);
         }
 
         // MODE 2: Tabletop
