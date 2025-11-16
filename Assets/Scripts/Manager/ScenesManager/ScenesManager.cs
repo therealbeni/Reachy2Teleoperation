@@ -12,6 +12,8 @@ namespace TeleopReachy
         public GameObject ground = null;
         public GameObject XROrigin = null;
 
+        private PassthroughController passthrough;
+
         // ---------------------------------------------------------------------
         // Scene name constants (must match .unity file names exactly)
         // ---------------------------------------------------------------------
@@ -100,6 +102,11 @@ namespace TeleopReachy
         // ---------------------------------------------------------------------
         // Helper utilities
         // ---------------------------------------------------------------------
+        private void SetPassthrough(bool enabled)
+        {
+            if (passthrough != null)
+                passthrough.SetPassthrough(enabled);
+        }
 
         private void UnloadSafetyLoadMenu()
         {
@@ -108,6 +115,8 @@ namespace TeleopReachy
             UnloadSceneIfLoaded(SAFETY_DANCE_TELEOP);
             ground.SetActive(true);
             SetTrackingEnabled(false); // non-VR
+            SetPassthrough(false);
+
             if (!SceneManager.GetSceneByName(MENU_SCENE).isLoaded)
                 SceneManager.LoadScene(MENU_SCENE, LoadSceneMode.Additive);
         }
@@ -149,6 +158,7 @@ namespace TeleopReachy
 
             ground.SetActive(true);
             SetTrackingEnabled(false); // no VR in Connection
+            SetPassthrough(false);
 
             if (!SceneManager.GetSceneByName(CONNECTION_SCENE).isLoaded)
                 SceneManager.LoadScene(CONNECTION_SCENE, LoadSceneMode.Additive);
@@ -163,6 +173,7 @@ namespace TeleopReachy
             UnloadSceneIfLoaded(MENU_SCENE);
 
             SetTrackingEnabled(false);
+            SetPassthrough(false);
             LoadConnectionScene();
         }
 
@@ -173,6 +184,7 @@ namespace TeleopReachy
 
             ground.SetActive(true);
             SetTrackingEnabled(false); // still non-VR
+            SetPassthrough(false);
 
             if (!SceneManager.GetSceneByName(MENU_SCENE).isLoaded)
                 SceneManager.LoadScene(MENU_SCENE, LoadSceneMode.Additive);
@@ -206,6 +218,7 @@ namespace TeleopReachy
 
             ground.SetActive(true);
             SetTrackingEnabled(false); // still non-VR
+            SetPassthrough(false);
 
             if (!SceneManager.GetSceneByName(safetySceneName).isLoaded)
                 SceneManager.LoadScene(safetySceneName, LoadSceneMode.Additive);
@@ -219,7 +232,10 @@ namespace TeleopReachy
         private void UnloadSafetyAndLoadDanceAfterReachy()
         {
             UnloadSceneIfLoaded(SAFETY_DANCE_AFTER_REACHY);
-            // TODO: Check if set tracking needs to be enabled here.
+
+            SetTrackingEnabled(true);
+            SetPassthrough(true);
+
             if (!SceneManager.GetSceneByName(DANCE_AFTER_REACHY_SCENE).isLoaded)
                 SceneManager.LoadScene(DANCE_AFTER_REACHY_SCENE, LoadSceneMode.Additive);
         }
@@ -229,6 +245,7 @@ namespace TeleopReachy
         {
             UnloadSceneIfLoaded(SAFETY_TABLETOP);
             SetTrackingEnabled(true); // entering VR
+            SetPassthrough(false);
             StartCoroutine(LoadRobotDataSceneAndMirrorScene(MIRROR_TABLETOP));
         }
 
@@ -237,6 +254,7 @@ namespace TeleopReachy
         {
             UnloadSceneIfLoaded(SAFETY_DANCE_TELEOP);
             SetTrackingEnabled(true); // entering VR
+            SetPassthrough(false);
             StartCoroutine(LoadRobotDataSceneAndMirrorScene(MIRROR_DANCE));
         }
 
@@ -256,6 +274,7 @@ namespace TeleopReachy
         private void LoadMirrorScene(string mirrorSceneName)
         {
             ground.SetActive(true);
+            SetPassthrough(false);
             StartCoroutine(LoadTransitionRoom(mirrorSceneName));
         }
 
@@ -285,6 +304,8 @@ namespace TeleopReachy
             else if (SceneManager.GetSceneByName(MIRROR_DANCE).isLoaded)
                 teleopSceneName = TELEOP_DANCE;
 
+            SetPassthrough(false);
+
             StartCoroutine(LoadTeleoperationRoom(teleopSceneName));
 
             // Exit any mirror scene; tracking stays ON
@@ -312,6 +333,8 @@ namespace TeleopReachy
                 mirrorSceneName = MIRROR_DANCE;
 
             UnloadAllTeleopScenes();
+            SetPassthrough(false);
+
             LoadMirrorScene(mirrorSceneName);
         }
 
