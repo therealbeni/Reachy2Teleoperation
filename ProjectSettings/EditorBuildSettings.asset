@@ -56,6 +56,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DanceTeleoperationScene.unity
     guid: dcb772499e886bc42a1869bdb96efd25
+  - enabled: 1
+    path: Assets/Scenes/DanceAfterReachyScene.unity
+    guid: a9c74a943381fd842b0a72116a0e3dae
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f912f927e1d40814794cefa807ff9ca8, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 27bf24d0ebf1fb04c936c06766dc642c, type: 2}
