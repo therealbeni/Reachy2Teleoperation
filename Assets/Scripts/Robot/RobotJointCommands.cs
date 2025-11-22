@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System;
-using UnityEngine;
-using Reachy.Part.Hand;
-using Reachy.Part.Arm;
-using Reachy.Part.Head;
-using Reachy.Kinematics;
+﻿using Component;
 using Component.DynamixelMotor;
+using Reachy.Kinematics;
+using Reachy.Part.Arm;
+using Reachy.Part.Hand;
+using Reachy.Part.Head;
+using System;
+using System.Collections;
+using UnityEngine;
 
 
 namespace TeleopReachy
@@ -86,6 +87,27 @@ namespace TeleopReachy
             {
                 GoalPose = rArmZeroTarget
             };
+        }
+
+        public void SendJointGoalPositions(System.Collections.Generic.Dictionary<string, float> jointsDeg)
+        {
+            if (jointsDeg == null || jointsDeg.Count == 0)
+            {
+                return;
+            }
+
+            var motorsCmd = new DynamixelMotorsCommand();
+
+            foreach (var kvp in jointsDeg)
+            {
+                motorsCmd.Cmd.Add(new DynamixelMotorCommand
+                {
+                    Id = new ComponentId { Name = kvp.Key },          // Motor name e.g. "l_arm_shoulder_axis_1"
+                    GoalPosition = Mathf.Deg2Rad * kvp.Value          // SDK expects radians
+                });
+            }
+
+            dataController.SendAntennasCommand(motorsCmd); // reusing antennas command to send generic motors commands 
         }
 
         protected override void ActualSendGrippersCommands(HandPositionRequest leftGripperCommand, HandPositionRequest rightGripperCommand)

@@ -89,6 +89,16 @@ namespace TeleopReachy
             EventManager.StartListening(EventNames.HideXRay, HideXRay);
         }
 
+        private void Awake()
+        {
+            Debug.Log("Connecting PassthroughController");
+
+            passthrough = FindObjectOfType<PassthroughController>(true);
+
+            if (passthrough == null)
+                Debug.LogError("[ScenesManager] PassthroughController not found in any loaded scene!");
+        }
+
         private void QuitApplication()
         {
             Debug.Log("Exiting app");
@@ -233,6 +243,7 @@ namespace TeleopReachy
         {
             UnloadSceneIfLoaded(SAFETY_DANCE_AFTER_REACHY);
 
+            ground.SetActive(false);
             SetTrackingEnabled(true);
             SetPassthrough(true);
 

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c52a4f9c35a5247a74f1c29afc8b01, type: 3}
+  m_Name: NewDanceSequence
+  m_EditorClassIdentifier: 
+  sequenceName: hello_world
+  steps:
+  - {fileID: 11400000, guid: d21ae0fe3ebeb074ba1a39a4bb59ef62, type: 2}
+  - {fileID: 11400000, guid: e2682b904b3641343ab6e03b283338d1, type: 2}
+  - {fileID: 11400000, guid: ee30aef4f1221c149973f8f0124c4618, type: 2}
