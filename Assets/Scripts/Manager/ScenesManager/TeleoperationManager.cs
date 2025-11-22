@@ -9,8 +9,8 @@ namespace TeleopReachy
     public class TeleoperationManager : Singleton<TeleoperationManager>
     {
         private RobotConfig robotConfig;
-        private RobotStatus robotStatus;
-        private RobotJointCommands jointsCommands;
+        public RobotStatus robotStatus;
+        public RobotJointCommands jointsCommands;
         private RobotMobilityCommands mobilityCommands;
 
         private UserMovementsInput userMovementsInput;
