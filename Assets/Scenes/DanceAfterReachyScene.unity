@@ -222,7 +222,7 @@ MonoBehaviour:
   sequence: {fileID: 11400000, guid: 97a1f058912b6ef41851b4e9648df78d, type: 2}
   reachy: {fileID: 1902501482}
   autoPlay: 1
-  useRealRobot: 1
+  useRealRobot: 0
 --- !u!4 &2049144363
 Transform:
   m_ObjectHideFlags: 0

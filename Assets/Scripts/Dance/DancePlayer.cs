@@ -39,12 +39,18 @@ public class DancePlayer : MonoBehaviour
         "r_arm_wrist_yaw"
     };
 
+    private readonly string[] jointNamesHead = new string[]
+    {
+        "head_neck_roll",
+        "head_neck_pitch",
+        "head_neck_yaw"
+    };
+
     private void Awake()
     {
         if (reachy == null)
             reachy = FindObjectOfType<Reachy2Controller.Reachy2Controller>();
 
-        // Get low-level robot objects directly, NOT via TeleoperationManager state
         var data = RobotDataManager.Instance;
         if (data != null)
         {
@@ -93,9 +99,11 @@ public class DancePlayer : MonoBehaviour
 
             float[] lStart = GetCurrentArmAngles(jointNamesL);
             float[] rStart = GetCurrentArmAngles(jointNamesR);
+            float[] headStart = GetCurrentArmAngles(jointNamesHead);
 
             float[] lTarget = step.leftArmJoints;
             float[] rTarget = step.rightArmJoints;
+            float[] headTarget = step.headJoints;
 
             float elapsed = 0f;
 
@@ -121,6 +129,15 @@ public class DancePlayer : MonoBehaviour
                     SendJointsImmediate(jointNamesR, rInterp);
                 }
 
+                if (headTarget != null && headTarget.Length == jointNamesHead.Length)
+                {
+                    float[] headInterp = new float[jointNamesHead.Length];
+                    for (int i = 0; i < jointNamesHead.Length; i++)
+                        headInterp[i] = Mathf.Lerp(headStart[i], headTarget[i], t);
+
+                    SendJointsImmediate(jointNamesHead, headInterp);
+                }
+
                 elapsed += Time.deltaTime;
                 yield return null;
             }
@@ -131,6 +148,9 @@ public class DancePlayer : MonoBehaviour
 
             if (rTarget != null && rTarget.Length == jointNamesR.Length)
                 SendJointsImmediate(jointNamesR, rTarget);
+
+            if (headTarget != null && headTarget.Length == jointNamesHead.Length)
+                SendJointsImmediate(jointNamesHead, headTarget);
         }
     }
 
@@ -155,6 +175,7 @@ public class DancePlayer : MonoBehaviour
         for (int i = 0; i < names.Length; i++)
             cmd[names[i]] = anglesDeg[i];
 
+      
         // Unity prefab (always safe)
         if (reachy != null)
             reachy.HandleCommand(cmd);

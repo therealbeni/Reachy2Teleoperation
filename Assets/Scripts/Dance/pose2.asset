@@ -30,3 +30,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  headJoints:
+  - -45
+  - 20
+  - 15

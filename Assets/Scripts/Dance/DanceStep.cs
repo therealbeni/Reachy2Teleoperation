@@ -16,4 +16,7 @@ public class DanceStep : ScriptableObject
 
     [Header("Left arm joint angles (degrees)")]
     public float[] leftArmJoints = new float[7];
+
+    [Header("Head joint angles; Roll, Pitch, Yaw(degrees)")]
+    public float[] headJoints = new float[3];
 }
