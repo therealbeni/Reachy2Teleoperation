@@ -44,6 +44,20 @@ namespace TeleopReachy
             EventManager.StartListening(EventNames.OnResumeTeleoperation, ResumeRobotTeleoperation);
         }
 
+        public void StartDanceRoutine()
+        {
+            Debug.Log("[RobotStatus]: Start dance routine, turnig on robot");
+            areRobotMovementsSuspended = false;
+            IsRobotPositionLocked = false;
+        }
+
+        public void StopDanceRoutine()
+        {
+            Debug.Log("[RobotStatus]: Stop dance routine, suspending robot");
+            areRobotMovementsSuspended = true;
+            IsRobotPositionLocked = true;
+        }
+
         public void LeftGripperClosed(bool isclosed)
         {
             isLeftGripperClosed = isclosed;

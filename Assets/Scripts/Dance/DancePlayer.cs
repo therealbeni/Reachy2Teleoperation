@@ -66,9 +66,23 @@ public class DancePlayer : MonoBehaviour
 
     private void Start()
     {
+        var robotStatus = RobotDataManager.Instance.RobotStatus;
+        if (useRealRobot && robotStatus != null)
+        {
+            robotStatus.StartDanceRoutine();
+            Debug.Log("[DancePlayer] RobotStatus set to dance routine.");
+        }
+
         Debug.Log("[DancePlayer] Initialized.");
         if (autoPlay)
             StartDance();
+
+        if (useRealRobot && robotStatus != null)
+        {
+            robotStatus.StopDanceRoutine();
+            Debug.Log("[DancePlayer] RobotStatus set to dance routine.");
+        }
+
     }
 
     public void StartDance()
