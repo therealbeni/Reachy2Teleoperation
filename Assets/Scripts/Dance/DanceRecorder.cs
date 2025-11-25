@@ -1,15 +1,14 @@
 using Reachy.Part.Arm;
 using Reachy.Part.Head;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TeleopReachy;
 using UnityEngine;
+using Newtonsoft.Json;   // <-- make sure the Newtonsoft.Json package is in the project
 
 public class DanceRecorder : MonoBehaviour
 {
-
     [Serializable]
     public class PoseSample
     {
@@ -20,27 +19,30 @@ public class DanceRecorder : MonoBehaviour
     }
 
     [Serializable]
-    public class  DanceRecordingData
+    public class DanceRecordingData
     {
         public List<PoseSample> samples = new List<PoseSample>();
     }
 
+    [Header("Recording")]
     public bool allowRecording = true;
 
     [Header("Saving")]
-    public string recordingsFolderName = "Resources/DanceRecordings";
+    [Tooltip("Relative folder under Assets where recordings will be saved.")]
+    public string recordingsFolderName = "dance_recordings";
     public string fileNamePrefix = "dance_";
     public string fileExtension = ".json";
+
+    [Header("UI")]
+    [SerializeField]
+    private GameObject recorderIndicator;
 
     private UserMovementsInput userMovementsInput;
     private bool isRecording = false;
     private float recordingStartTime = 0.0f;
-
     private readonly List<PoseSample> recordedSamples = new List<PoseSample>();
-    public GameObject recorderIndicator;
 
-
-    void InitUserInputs()
+    private void InitUserInputs()
     {
         userMovementsInput = UserInputManager.Instance != null
             ? UserInputManager.Instance.UserMovementsInput
@@ -50,11 +52,13 @@ public class DanceRecorder : MonoBehaviour
         {
             Debug.LogWarning("DanceRecorder: UserMovementsInput is null after InitUserInputs.");
         }
+        else
+        {
+            Debug.Log("DanceRecorder: UserMovementsInput initialized.");
+        }
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         EventManager.StartListening(EventNames.MirrorSceneLoaded, InitUserInputs);
 
@@ -64,7 +68,14 @@ public class DanceRecorder : MonoBehaviour
         }
 
         if (recorderIndicator != null)
+        {
             recorderIndicator.SetActive(false);
+            Debug.Log("DanceRecorder: recorderIndicator found and set inactive on Start.");
+        }
+        else
+        {
+            Debug.LogWarning("DanceRecorder: recorderIndicator is not assigned in the Inspector.");
+        }
     }
 
     private void OnDestroy()
@@ -72,7 +83,7 @@ public class DanceRecorder : MonoBehaviour
         EventManager.StopListening(EventNames.MirrorSceneLoaded, InitUserInputs);
     }
 
-    void BeginRecording()
+    private void BeginRecording()
     {
         if (!allowRecording)
         {
@@ -97,12 +108,13 @@ public class DanceRecorder : MonoBehaviour
         if (recorderIndicator != null)
         {
             recorderIndicator.SetActive(true);
+            Debug.Log($"DanceRecorder: recorderIndicator.SetActive(true). activeSelf={recorderIndicator.activeSelf}");
         }
 
         Debug.Log("DanceRecorder: Started Recording Dance");
     }
 
-    void StopRecording()
+    private void StopRecording()
     {
         if (!isRecording)
             return;
@@ -112,6 +124,7 @@ public class DanceRecorder : MonoBehaviour
         if (recorderIndicator != null)
         {
             recorderIndicator.SetActive(false);
+            Debug.Log($"DanceRecorder: recorderIndicator.SetActive(false). activeSelf={recorderIndicator.activeSelf}");
         }
 
         Debug.Log($"DanceRecorder: Stopped Recording Dance. Recorded {recordedSamples.Count} samples.");
@@ -119,7 +132,7 @@ public class DanceRecorder : MonoBehaviour
         SaveRecordedDanceToFile();
     }
 
-    void ReadAndSaveCurrentPose()
+    private void ReadAndSaveCurrentPose()
     {
         if (userMovementsInput == null)
         {
@@ -142,7 +155,7 @@ public class DanceRecorder : MonoBehaviour
         recordedSamples.Add(sample);
     }
 
-    void SaveRecordedDanceToFile()
+    private void SaveRecordedDanceToFile()
     {
         if (recordedSamples.Count == 0)
         {
@@ -155,7 +168,9 @@ public class DanceRecorder : MonoBehaviour
             samples = new List<PoseSample>(recordedSamples)
         };
 
-        string json = JsonUtility.ToJson(data, true);
+        // Use Newtonsoft.Json so complex types like NeckJointGoal / ArmCartesianGoal
+        // are serialized (as long as they expose public fields/properties).
+        string json = JsonConvert.SerializeObject(data, Formatting.Indented);
 
         string folderPath = Path.Combine(Application.dataPath, recordingsFolderName);
         if (!Directory.Exists(folderPath))
@@ -178,21 +193,38 @@ public class DanceRecorder : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (!allowRecording)
             return;
 
+        // Editor keyboard test (optional, but useful to debug the indicator
+        // even without the headset / OVR input).
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("DanceRecorder: Editor key R pressed -> BeginRecording()");
+            BeginRecording();
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Debug.Log("DanceRecorder: Editor key T pressed -> StopRecording()");
+            StopRecording();
+        }
+#endif
+
         // Start recording (B)
         if (OVRInput.GetDown(OVRInput.RawButton.B))
         {
+            Debug.Log("DanceRecorder: OVR B pressed -> BeginRecording()");
             BeginRecording();
         }
 
         // Stop recording and save (A)
         if (OVRInput.GetDown(OVRInput.RawButton.A))
         {
+            Debug.Log("DanceRecorder: OVR A pressed -> StopRecording()");
             StopRecording();
         }
 
@@ -203,5 +235,3 @@ public class DanceRecorder : MonoBehaviour
         }
     }
 }
-
-

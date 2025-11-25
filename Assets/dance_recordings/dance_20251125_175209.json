@@ -1,0 +1,4702 @@
+{
+  "samples": [
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99812179803848267,
+              "X": 0.035878848284482956,
+              "Y": 0.034724783152341843,
+              "Z": -0.035491574555635452
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.36454933881759644,
+            0.089744850993156433,
+            -0.92684942483901978,
+            0.26652193069458008,
+            -0.035575240850448608,
+            0.995960533618927,
+            0.082444250583648682,
+            0.19816555082798004,
+            0.93050438165664673,
+            0.0029178783297538757,
+            0.36626946926116943,
+            -0.3290867805480957,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.38503426313400269,
+            -0.16243721544742584,
+            -0.90849488973617554,
+            0.245442733168602,
+            0.045910689979791641,
+            0.98654139041900635,
+            -0.15693414211273193,
+            -0.14517289400100708,
+            0.92175978422164917,
+            0.018715418875217438,
+            0.38730984926223755,
+            -0.29616165161132813,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.0
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99812817573547363,
+              "X": 0.035847194492816925,
+              "Y": 0.034577693790197372,
+              "Z": -0.035489503294229507
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.36247265338897705,
+            0.088820360600948334,
+            -0.92775249481201172,
+            0.266724556684494,
+            -0.036036424338817596,
+            0.9960397481918335,
+            0.081278569996356964,
+            0.198233500123024,
+            0.93129754066467285,
+            0.0039716139435768127,
+            0.364237904548645,
+            -0.32839429378509521,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.37999498844146729,
+            -0.16004253923892975,
+            -0.91103816032409668,
+            0.24568748474121094,
+            0.041477590799331665,
+            0.986875593662262,
+            -0.15606462955474854,
+            -0.1453067809343338,
+            0.92405831813812256,
+            0.021516144275665283,
+            0.38164597749710083,
+            -0.29492723941802979,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.009670258
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99814456701278687,
+              "X": 0.035498868674039841,
+              "Y": 0.034678597003221512,
+              "Z": -0.035281017422676086
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.35901451110839844,
+            0.088102929294109344,
+            -0.929164469242096,
+            0.26697921752929688,
+            -0.036610603332519531,
+            0.9960978627204895,
+            0.080303773283958435,
+            0.19828289747238159,
+            0.9326137900352478,
+            0.0051870420575141907,
+            0.36083906888961792,
+            -0.32702302932739258,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.37763988971710205,
+            -0.15708494186401367,
+            -0.91253083944320679,
+            0.24599917232990265,
+            0.0420612208545208,
+            0.98739778995513916,
+            -0.15256617963314056,
+            -0.14546506106853485,
+            0.92499679327011108,
+            0.01923292875289917,
+            0.37948799133300781,
+            -0.29397141933441162,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.0175132751
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99816215038299561,
+              "X": 0.035133775323629379,
+              "Y": 0.034814763814210892,
+              "Z": -0.035012073814868927
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.35283786058425903,
+            0.086054518818855286,
+            -0.93171912431716919,
+            0.26732701063156128,
+            -0.038931664079427719,
+            0.99624967575073242,
+            0.077271401882171631,
+            0.19837726652622223,
+            0.93487447500228882,
+            0.0090090744197368622,
+            0.35486483573913574,
+            -0.3250923752784729,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.37461698055267334,
+            -0.15540832281112671,
+            -0.91406267881393433,
+            0.24631519615650177,
+            0.043655261397361755,
+            0.98771578073501587,
+            -0.15003924071788788,
+            -0.14554606378078461,
+            0.9261514544487,
+            0.01630362868309021,
+            0.37679952383041382,
+            -0.29305225610733032,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.0259456635
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99816513061523438,
+              "X": 0.034843273460865021,
+              "Y": 0.034979019314050674,
+              "Z": -0.035052716732025146
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34979242086410522,
+            0.084968239068984985,
+            -0.93296611309051514,
+            0.26748484373092651,
+            -0.040703609585762024,
+            0.99631643295288086,
+            0.075476951897144318,
+            0.19842582941055298,
+            0.93594264984130859,
+            0.011573821306228638,
+            0.35196244716644287,
+            -0.32427000999450684,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.36995059251785278,
+            -0.15535725653171539,
+            -0.9159700870513916,
+            0.24667260050773621,
+            0.043873962014913559,
+            0.98774087429046631,
+            -0.14981009066104889,
+            -0.14551734924316406,
+            0.92801511287689209,
+            0.015235140919685364,
+            0.37223142385482788,
+            -0.29219019412994385,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.0334281921
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99818223714828491,
+              "X": 0.034687627106904984,
+              "Y": 0.03495720773935318,
+              "Z": -0.034741971641778946
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34547984600067139,
+            0.083620414137840271,
+            -0.93469327688217163,
+            0.26767510175704956,
+            -0.043690398335456848,
+            0.99637526273727417,
+            0.072989895939826965,
+            0.19844003021717072,
+            0.93740874528884888,
+            0.015620561316609383,
+            0.34788095951080322,
+            -0.32324647903442383,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.36342048645019531,
+            -0.15890681743621826,
+            -0.91797304153442383,
+            0.24699616432189941,
+            0.039916690438985825,
+            0.98709678649902344,
+            -0.15506979823112488,
+            -0.14528103172779083,
+            0.93076992034912109,
+            0.0197131410241127,
+            0.36507421731948853,
+            -0.29116082191467285,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.0423088074
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99819022417068481,
+              "X": 0.034355256706476212,
+              "Y": 0.03505706787109375,
+              "Z": -0.034742541611194611
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34190863370895386,
+            0.084972232580184937,
+            -0.935883641242981,
+            0.267850786447525,
+            -0.046976655721664429,
+            0.99620389938354492,
+            0.073286831378936768,
+            0.19830881059169769,
+            0.93855834007263184,
+            0.018907280638813972,
+            0.34460240602493286,
+            -0.32223188877105713,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.3579094409942627,
+            -0.16195651888847351,
+            -0.91960382461547852,
+            0.24724258482456207,
+            0.03476329892873764,
+            0.98647171258926392,
+            -0.16020317375659943,
+            -0.1450699120759964,
+            0.93310916423797607,
+            0.025369808077812195,
+            0.35869771242141724,
+            -0.29019170999526978,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.04988289
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99819272756576538,
+              "X": 0.034505788236856461,
+              "Y": 0.035212524235248566,
+              "Z": -0.034361310303211212
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34110277891159058,
+            0.089796856045722961,
+            -0.93572741746902466,
+            0.26796376705169678,
+            -0.047133520245552063,
+            0.99580866098403931,
+            0.078380867838859558,
+            0.19799508154392242,
+            0.93884378671646118,
+            0.017368171364068985,
+            0.34390556812286377,
+            -0.32136094570159912,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.35493218898773193,
+            -0.16411025822162628,
+            -0.92037558555603027,
+            0.24746942520141602,
+            0.03110070526599884,
+            0.9860001802444458,
+            -0.16381804645061493,
+            -0.14490166306495667,
+            0.93437469005584717,
+            0.029519990086555481,
+            0.35506713390350342,
+            -0.28938180208206177,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.0573806763
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.9982033371925354,
+              "X": 0.034213583916425705,
+              "Y": 0.035377047955989838,
+              "Z": -0.034173406660556793
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.33905166387557983,
+            0.09025108814239502,
+            -0.93642890453338623,
+            0.2680814266204834,
+            -0.048162247985601425,
+            0.99574768543243408,
+            0.078530080616474152,
+            0.19794875383377075,
+            0.93953430652618408,
+            0.01847473718225956,
+            0.34195655584335327,
+            -0.32061547040939331,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.35396552085876465,
+            -0.16469575464725494,
+            -0.92064321041107178,
+            0.24773602187633514,
+            0.02976652979850769,
+            0.98585808277130127,
+            -0.16491767764091492,
+            -0.14477063715457916,
+            0.93478477001190186,
+            0.030970834195613861,
+            0.35386216640472412,
+            -0.2886623740196228,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.06654358
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99822491407394409,
+              "X": 0.033919010311365128,
+              "Y": 0.035485755652189255,
+              "Z": -0.033722493797540665
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34254211187362671,
+            0.097012832760810852,
+            -0.93448030948638916,
+            0.26824432611465454,
+            -0.043553948402404785,
+            0.99522477388381958,
+            0.08735391497612,
+            0.19766926765441895,
+            0.93849241733551025,
+            0.010777909308671951,
+            0.34513163566589355,
+            -0.319854736328125,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.35375404357910156,
+            -0.16503125429153442,
+            -0.92066448926925659,
+            0.24802716076374054,
+            0.03005266934633255,
+            0.9858086109161377,
+            -0.16516114771366119,
+            -0.14461109042167664,
+            0.93485575914382935,
+            0.030758023262023926,
+            0.35369336605072021,
+            -0.28799271583557129,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.0746459961
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99826133251190186,
+              "X": 0.033469833433628082,
+              "Y": 0.035318214446306229,
+              "Z": -0.033266708254814148
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.343605101108551,
+            0.098866835236549377,
+            -0.9338957667350769,
+            0.26845806837081909,
+            -0.040926042944192886,
+            0.99507462978363037,
+            0.0902857705950737,
+            0.19768573343753815,
+            0.93822222948074341,
+            0.00719798356294632,
+            0.345958948135376,
+            -0.31914782524108887,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.35384416580200195,
+            -0.16401752829551697,
+            -0.920810878276825,
+            0.24818731844425201,
+            0.03158915787935257,
+            0.9860379695892334,
+            -0.16349706053733826,
+            -0.144493967294693,
+            0.93477088212966919,
+            0.02876485139131546,
+            0.35408496856689453,
+            -0.28727865219116211,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.08367348
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99829012155532837,
+              "X": 0.033204950392246246,
+              "Y": 0.03498256579041481,
+              "Z": -0.033020693808794022
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34362179040908813,
+            0.099308222532272339,
+            -0.93384283781051636,
+            0.2686828076839447,
+            -0.039988070726394653,
+            0.99503839015960693,
+            0.091101780533790588,
+            0.19779403507709503,
+            0.93825668096542358,
+            0.0060379840433597565,
+            0.34588801860809326,
+            -0.31846404075622559,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.35670244693756104,
+            -0.16231726109981537,
+            -0.9200090765953064,
+            0.248337522149086,
+            0.035659387707710266,
+            0.9864383339881897,
+            -0.16021168231964111,
+            -0.14440391957759857,
+            0.93353730440139771,
+            0.024340957403182983,
+            0.35765308141708374,
+            -0.28681904077529907,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.09106445
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.998315691947937,
+              "X": 0.0329732745885849,
+              "Y": 0.034768171608448029,
+              "Z": -0.032707005739212036
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.3427814245223999,
+            0.096787646412849426,
+            -0.93441599607467651,
+            0.26884075999259949,
+            -0.039369553327560425,
+            0.99528449773788452,
+            0.088650122284889221,
+            0.1979653537273407,
+            0.93858999013900757,
+            0.0063999108970165253,
+            0.34497553110122681,
+            -0.31807923316955566,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.3566628098487854,
+            -0.16425204277038574,
+            -0.9196808934211731,
+            0.24849224090576172,
+            0.035436496138572693,
+            0.98609334230422974,
+            -0.16237041354179382,
+            -0.1442594975233078,
+            0.93356090784072876,
+            0.025321215391159058,
+            0.35752332210540771,
+            -0.28635871410369873,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.09922981
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99833738803863525,
+              "X": 0.032911937683820724,
+              "Y": 0.034391548484563828,
+              "Z": -0.03250541165471077
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.33765095472335815,
+            0.091220743954181671,
+            -0.93684101104736328,
+            0.26925686001777649,
+            -0.03786199539899826,
+            0.99580365419387817,
+            0.083315983414649963,
+            0.19834241271018982,
+            0.94050979614257813,
+            0.0073389187455177307,
+            0.33968782424926758,
+            -0.31682169437408447,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.35166549682617188,
+            -0.15822100639343262,
+            -0.92265808582305908,
+            0.24857158958911896,
+            0.036352954804897308,
+            0.987177848815918,
+            -0.15542945265769958,
+            -0.14435499906539917,
+            0.93541979789733887,
+            0.02111787348985672,
+            0.352908194065094,
+            -0.2851790189743042,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.108919144
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99834424257278442,
+              "X": 0.032969202846288681,
+              "Y": 0.034309633076190948,
+              "Z": -0.032320812344551086
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.33179694414138794,
+            0.085330724716186523,
+            -0.93948376178741455,
+            0.26949453353881836,
+            -0.03694099560379982,
+            0.99631196260452271,
+            0.0774458572268486,
+            0.19874739646911621,
+            0.9426274299621582,
+            0.00900915265083313,
+            0.3337254524230957,
+            -0.3158872127532959,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34996485710144043,
+            -0.15609213709831238,
+            -0.92366659641265869,
+            0.24852494895458221,
+            0.027234561741352081,
+            0.98729819059371948,
+            -0.15652656555175781,
+            -0.14453786611557007,
+            0.93636691570281982,
+            0.029623143374919891,
+            0.349770724773407,
+            -0.28441876173019409,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.116758347
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99834400415420532,
+              "X": 0.033148586750030518,
+              "Y": 0.034185469150543213,
+              "Z": -0.032277897000312805
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.32806503772735596,
+            0.082631975412368774,
+            -0.94103431701660156,
+            0.2696928083896637,
+            -0.036743666976690292,
+            0.996529221534729,
+            0.07469533383846283,
+            0.19897504150867462,
+            0.94394040107727051,
+            0.010072104632854462,
+            0.32996261119842529,
+            -0.3150743842124939,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34720563888549805,
+            -0.15731832385063171,
+            -0.92449951171875,
+            0.24857984483242035,
+            0.026368051767349243,
+            0.98707675933837891,
+            -0.15806405246257782,
+            -0.14448772370815277,
+            0.93741834163665771,
+            0.030503511428833008,
+            0.34686678647994995,
+            -0.28389346599578857,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.12537384
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99833226203918457,
+              "X": 0.033378902822732925,
+              "Y": 0.034454889595508575,
+              "Z": -0.03211640939116478
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.32417398691177368,
+            0.080386132001876831,
+            -0.94257611036300659,
+            0.26990443468093872,
+            -0.038485690951347351,
+            0.99667888879776,
+            0.071764089167118073,
+            0.19914983212947845,
+            0.945214569568634,
+            0.013011621311306953,
+            0.32619106769561768,
+            -0.31427091360092163,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.349267840385437,
+            -0.15597008168697357,
+            -0.92395102977752686,
+            0.24870277941226959,
+            0.028759270906448364,
+            0.98736923933029175,
+            -0.15580412745475769,
+            -0.14441598951816559,
+            0.93658161163330078,
+            0.027845241129398346,
+            0.34934192895889282,
+            -0.28354167938232422,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.133144379
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99833184480667114,
+              "X": 0.033411655575037,
+              "Y": 0.034541945904493332,
+              "Z": -0.032002512365579605
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.32066822052001953,
+            0.0802353098988533,
+            -0.94378727674484253,
+            0.27009075880050659,
+            -0.041161403059959412,
+            0.996644914150238,
+            0.070743657648563385,
+            0.19920895993709564,
+            0.94629687070846558,
+            0.016162356361746788,
+            0.32289499044418335,
+            -0.31349480152130127,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.3547547459602356,
+            -0.15891486406326294,
+            -0.92135518789291382,
+            0.24830985069274902,
+            0.033149026334285736,
+            0.98696756362915039,
+            -0.15746811032295227,
+            -0.14438286423683167,
+            0.93437165021896362,
+            0.025320559740066528,
+            0.35539931058883667,
+            -0.2849736213684082,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.142023087
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.9983479380607605,
+              "X": 0.033118549734354019,
+              "Y": 0.034747719764709473,
+              "Z": -0.031578369438648224
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31724369525909424,
+            0.083080828189849854,
+            -0.94469809532165527,
+            0.2702203094959259,
+            -0.044382452964782715,
+            0.99636435508728027,
+            0.072720304131507874,
+            0.19913950562477112,
+            0.94730520248413086,
+            0.018857929855585098,
+            0.31977760791778564,
+            -0.31278371810913086,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.35300594568252563,
+            -0.16170135140419006,
+            -0.92154198884963989,
+            0.24845179915428162,
+            0.033130183815956116,
+            0.98649471998214722,
+            -0.1604076623916626,
+            -0.14416044950485229,
+            0.935034453868866,
+            0.026094026863574982,
+            0.35359567403793335,
+            -0.28416836261749268,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.1497078
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99834978580474854,
+              "X": 0.033078614622354507,
+              "Y": 0.034787330776453018,
+              "Z": -0.031518548727035522
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31489121913909912,
+            0.084963038563728333,
+            -0.94531744718551636,
+            0.27036416530609131,
+            -0.046219423413276672,
+            0.99617636203765869,
+            0.074138149619102478,
+            0.19913899898529053,
+            0.9480019211769104,
+            0.020346548408269882,
+            0.31761413812637329,
+            -0.31207191944122314,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34860199689865112,
+            -0.16694539785385132,
+            -0.92228317260742188,
+            0.248564213514328,
+            0.031238764524459839,
+            0.98553186655044556,
+            -0.1665867418050766,
+            -0.14382475614547729,
+            0.93675029277801514,
+            0.029261529445648193,
+            0.3487735390663147,
+            -0.28256672620773315,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.157751083
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.9983513355255127,
+              "X": 0.032885149121284485,
+              "Y": 0.034807078540325165,
+              "Z": -0.031650170683860779
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31342017650604248,
+            0.089030086994171143,
+            -0.94543206691741943,
+            0.27052006125450134,
+            -0.0472852922976017,
+            0.99582356214523315,
+            0.078099846839904785,
+            0.19912055134773254,
+            0.94843673706054688,
+            0.020226934924721718,
+            0.31632101535797119,
+            -0.31150710582733154,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34676021337509155,
+            -0.16823293268680573,
+            -0.92274343967437744,
+            0.2484690397977829,
+            0.030669316649436951,
+            0.98529082536697388,
+            -0.16811120510101318,
+            -0.14376381039619446,
+            0.93745243549346924,
+            0.029994398355484009,
+            0.34681928157806396,
+            -0.282088041305542,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.167760849
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99835234880447388,
+              "X": 0.032943245023489,
+              "Y": 0.034682817757129669,
+              "Z": -0.031692661345005035
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31447219848632813,
+            0.089578598737716675,
+            -0.9450308084487915,
+            0.270714670419693,
+            -0.046620115637779236,
+            0.99579364061355591,
+            0.078876882791519165,
+            0.19925212860107422,
+            0.94812130928039551,
+            0.019252844154834747,
+            0.31732559204101563,
+            -0.31104826927185059,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34778732061386108,
+            -0.16620491445064545,
+            -0.92272430658340454,
+            0.24825671315193176,
+            0.032507061958312988,
+            0.98570787906646729,
+            -0.16529744863510132,
+            -0.14391627907752991,
+            0.937009871006012,
+            0.02749333530664444,
+            0.34821957349777222,
+            -0.28226804733276367,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.177021027
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99835431575775146,
+              "X": 0.032961405813694,
+              "Y": 0.03446129709482193,
+              "Z": -0.031851720064878464
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.316650390625,
+            0.0860135480761528,
+            -0.94463461637496948,
+            0.27093905210494995,
+            -0.042636282742023468,
+            0.99616420269012451,
+            0.07641349732875824,
+            0.19954220950603485,
+            0.94758373498916626,
+            0.016079319640994072,
+            0.31910312175750732,
+            -0.31068521738052368,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34868103265762329,
+            -0.16325688362121582,
+            -0.92291319370269775,
+            0.24813501536846161,
+            0.033446438610553741,
+            0.9862525463104248,
+            -0.16182494163513184,
+            -0.14411233365535736,
+            0.936644434928894,
+            0.025557123124599457,
+            0.34934788942337036,
+            -0.2824103832244873,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.186807632
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99836528301239014,
+              "X": 0.032740414142608643,
+              "Y": 0.034318797290325165,
+              "Z": -0.031891763210296631
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31606239080429077,
+            0.08349929004907608,
+            -0.94505691528320313,
+            0.27114546298980713,
+            -0.039578691124916077,
+            0.99641281366348267,
+            0.074800178408622742,
+            0.19976623356342316,
+            0.94791257381439209,
+            0.013762583956122398,
+            0.31823337078094482,
+            -0.31007283926010132,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34740656614303589,
+            -0.16064390540122986,
+            -0.92385196685791016,
+            0.248227059841156,
+            0.033324487507343292,
+            0.98670917749404907,
+            -0.15904246270656586,
+            -0.14421290159225464,
+            0.93712234497070313,
+            0.024465516209602356,
+            0.34814262390136719,
+            -0.28194886445999146,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.1997776
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99836063385009766,
+              "X": 0.032845970243215561,
+              "Y": 0.034068841487169266,
+              "Z": -0.032197508960962296
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31374853849411011,
+            0.079169780015945435,
+            -0.94620001316070557,
+            0.27139604091644287,
+            -0.033556796610355377,
+            0.99681985378265381,
+            0.07227819412946701,
+            0.20010530948638916,
+            0.94891321659088135,
+            0.00907423347234726,
+            0.31540745496749878,
+            -0.30919218063354492,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34570509195327759,
+            -0.15360857546329498,
+            -0.92568504810333252,
+            0.24837972223758698,
+            0.02757243812084198,
+            0.98774677515029907,
+            -0.15361002087593079,
+            -0.14458297193050385,
+            0.93793821334838867,
+            0.027580417692661285,
+            0.34570443630218506,
+            -0.28105825185775757,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.2089138
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99836605787277222,
+              "X": 0.032556753605604172,
+              "Y": 0.033989347517490387,
+              "Z": -0.032404050230979919
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31189912557601929,
+            0.078347951173782349,
+            -0.94687956571578979,
+            0.27153411507606506,
+            -0.032681528478860855,
+            0.99688917398452759,
+            0.071720734238624573,
+            0.20019090175628662,
+            0.94955319166183472,
+            0.0085758157074451447,
+            0.31348943710327148,
+            -0.30873298645019531,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34516167640686035,
+            -0.15090280771255493,
+            -0.92633259296417236,
+            0.24840448796749115,
+            0.022035948932170868,
+            0.98802053928375244,
+            -0.15274117887020111,
+            -0.14477786421775818,
+            0.93828463554382324,
+            0.032307803630828857,
+            0.344352126121521,
+            -0.28073304891586304,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.217416763
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99837124347686768,
+              "X": 0.032454423606395721,
+              "Y": 0.033947769552469254,
+              "Z": -0.03238784521818161
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31012809276580811,
+            0.078263983130455017,
+            -0.94746804237365723,
+            0.271630197763443,
+            -0.0321836955845356,
+            0.99689877033233643,
+            0.071812674403190613,
+            0.20020860433578491,
+            0.9501500129699707,
+            0.0082218833267688751,
+            0.31168508529663086,
+            -0.30830371379852295,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34519726037979126,
+            -0.14990635216236115,
+            -0.92648112773895264,
+            0.24839173257350922,
+            0.017860367894172668,
+            0.98803210258483887,
+            -0.15321086347103119,
+            -0.14485575258731842,
+            0.938360333442688,
+            0.036340698599815369,
+            0.34374338388442993,
+            -0.28061026334762573,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.2259121
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99837130308151245,
+              "X": 0.032441828399896622,
+              "Y": 0.033926393836736679,
+              "Z": -0.032422397285699844
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.3086092472076416,
+            0.078056022524833679,
+            -0.94798094034194946,
+            0.27176129817962646,
+            -0.031464751809835434,
+            0.996919572353363,
+            0.071842454373836517,
+            0.20027616620063782,
+            0.95066851377487183,
+            0.0076567232608795166,
+            0.31011456251144409,
+            -0.30781424045562744,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34537768363952637,
+            -0.14924478530883789,
+            -0.926520586013794,
+            0.2484029233455658,
+            0.015258781611919403,
+            0.98803615570068359,
+            -0.15346577763557434,
+            -0.14488908648490906,
+            0.93833982944488525,
+            0.038866098970174789,
+            0.34352290630340576,
+            -0.28046333789825439,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.233867645
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99837958812713623,
+              "X": 0.0322854109108448,
+              "Y": 0.03384755551815033,
+              "Z": -0.032405558973550797
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.307472288608551,
+            0.081531964242458344,
+            -0.94805777072906494,
+            0.27179551124572754,
+            -0.032080493867397308,
+            0.99664431810379028,
+            0.07530607283115387,
+            0.20010428130626678,
+            0.95101618766784668,
+            0.0072596184909343719,
+            0.30905610322952271,
+            -0.30762159824371338,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.347647488117218,
+            -0.15186654031276703,
+            -0.92524486780166626,
+            0.24824237823486328,
+            0.018106132745742798,
+            0.98769915103912354,
+            -0.15531447529792786,
+            -0.14475233852863312,
+            0.9374505877494812,
+            0.037242110818624496,
+            0.34612083435058594,
+            -0.28080332279205322,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.242376328
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99838578701019287,
+              "X": 0.032250367105007172,
+              "Y": 0.033632479608058929,
+              "Z": -0.032472278922796249
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30797511339187622,
+            0.083061516284942627,
+            -0.94776171445846558,
+            0.27182358503341675,
+            -0.032426334917545319,
+            0.99651926755905151,
+            0.07679767906665802,
+            0.20003050565719604,
+            0.95084172487258911,
+            0.0070806555449962616,
+            0.30959653854370117,
+            -0.30762815475463867,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34803634881973267,
+            -0.15337789058685303,
+            -0.92484939098358154,
+            0.24815802276134491,
+            0.021356061100959778,
+            0.98756682872772217,
+            -0.15574240684509277,
+            -0.14466965198516846,
+            0.93723797798156738,
+            0.034452911466360092,
+            0.34698468446731567,
+            -0.28105378150939941,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.249879837
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99838793277740479,
+              "X": 0.03205496072769165,
+              "Y": 0.033780183643102646,
+              "Z": -0.032447014003992081
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30942094326019287,
+            0.083829388022422791,
+            -0.94722318649291992,
+            0.27179792523384094,
+            -0.033226732164621353,
+            0.99645155668258667,
+            0.077332243323326111,
+            0.20000915229320526,
+            0.95034468173980713,
+            0.0075448863208293915,
+            0.31110841035842896,
+            -0.307811439037323,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34799373149871826,
+            -0.15468797087669373,
+            -0.92464715242385864,
+            0.24802105128765106,
+            0.024638630449771881,
+            0.98746174573898315,
+            -0.15592369437217712,
+            -0.1446104496717453,
+            0.93717318773269653,
+            0.031478464603424072,
+            0.34744179248809814,
+            -0.2812158465385437,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.257324219
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99840933084487915,
+              "X": 0.032070964574813843,
+              "Y": 0.033214375376701355,
+              "Z": -0.032359976321458817
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.3106340765953064,
+            0.083916410803794861,
+            -0.94681835174560547,
+            0.27182134985923767,
+            -0.033395864069461823,
+            0.99644386768341064,
+            0.077358156442642212,
+            0.20004487037658691,
+            0.949942946434021,
+            0.0075897090137004852,
+            0.3123319149017334,
+            -0.30790239572525024,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34811890125274658,
+            -0.15476617217063904,
+            -0.924586832523346,
+            0.24796909093856812,
+            0.025875337421894073,
+            0.98748862743377686,
+            -0.15555289387702942,
+            -0.14462369680404663,
+            0.93709331750869751,
+            0.030226916074752808,
+            0.34776806831359863,
+            -0.28110998868942261,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.2669201
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.9984210729598999,
+              "X": 0.032136440277099609,
+              "Y": 0.032892893999814987,
+              "Z": -0.0322607159614563
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.3108518123626709,
+            0.08371107280254364,
+            -0.94676488637924194,
+            0.27186045050621033,
+            -0.0331123024225235,
+            0.99646300077438354,
+            0.077233508229255676,
+            0.20006038248538971,
+            0.94988149404525757,
+            0.0073413848876953125,
+            0.31252419948577881,
+            -0.30786430835723877,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34855115413665771,
+            -0.15525877475738525,
+            -0.92434132099151611,
+            0.24793410301208496,
+            0.027691282331943512,
+            0.98746049404144287,
+            -0.15541887283325195,
+            -0.14462780952453613,
+            0.93688070774078369,
+            0.028575249016284943,
+            0.34847980737686157,
+            -0.28111481666564941,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.274795532
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99842792749404907,
+              "X": 0.0322134904563427,
+              "Y": 0.03260258212685585,
+              "Z": -0.032264459878206253
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31041997671127319,
+            0.082718253135681152,
+            -0.94699394702911377,
+            0.27198320627212524,
+            -0.032206140458583832,
+            0.99655008316040039,
+            0.0764898955821991,
+            0.20012944936752319,
+            0.95005404949188232,
+            0.0067550055682659149,
+            0.31201308965682983,
+            -0.307645320892334,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34777319431304932,
+            -0.15520447492599487,
+            -0.92464345693588257,
+            0.24789738655090332,
+            0.027627475559711456,
+            0.98747164011001587,
+            -0.15535926818847656,
+            -0.1446496844291687,
+            0.93717163801193237,
+            0.028484255075454712,
+            0.34770411252975464,
+            -0.28112542629241943,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.2842903
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99843460321426392,
+              "X": 0.032172184437513351,
+              "Y": 0.032279476523399353,
+              "Z": -0.032424870878458023
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30960714817047119,
+            0.081331737339496613,
+            -0.9473799467086792,
+            0.27210402488708496,
+            -0.031269803643226624,
+            0.996667206287384,
+            0.075343921780586243,
+            0.20021693408489227,
+            0.95035040378570557,
+            0.0062973536550998688,
+            0.31111854314804077,
+            -0.30738431215286255,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34712374210357666,
+            -0.1550869345664978,
+            -0.92490726709365845,
+            0.24787664413452148,
+            0.026595942676067352,
+            0.98746287822723389,
+            -0.15559455752372742,
+            -0.14467336237430573,
+            0.93744224309921265,
+            0.029411815106868744,
+            0.34689652919769287,
+            -0.28109610080718994,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.291934967
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.9984511137008667,
+              "X": 0.032066166400909424,
+              "Y": 0.032024912536144257,
+              "Z": -0.032274838536977768
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30722945928573608,
+            0.078102782368659973,
+            -0.94842511415481567,
+            0.27232766151428223,
+            -0.029681079089641571,
+            0.99692797660827637,
+            0.072482213377952576,
+            0.20039449632167816,
+            0.95117253065109253,
+            0.0058816000819206238,
+            0.30860382318496704,
+            -0.306895911693573,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34392338991165161,
+            -0.15496566891670227,
+            -0.92612236738204956,
+            0.24775196611881256,
+            0.022340990602970123,
+            0.98735928535461426,
+            -0.15691578388214111,
+            -0.14481239020824432,
+            0.9387320876121521,
+            0.033276550471782684,
+            0.34303802251815796,
+            -0.280897855758667,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.29973793
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99844902753829956,
+              "X": 0.031881291419267654,
+              "Y": 0.0319104865193367,
+              "Z": -0.03263242170214653
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30586731433868408,
+            0.077343717217445374,
+            -0.94892740249633789,
+            0.27240422368049622,
+            -0.029466474428772926,
+            0.99698638916015625,
+            0.071762919425964355,
+            0.20041476190090179,
+            0.95161807537078857,
+            0.0060116052627563477,
+            0.3072245717048645,
+            -0.30678308010101318,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.3407217264175415,
+            -0.1542188823223114,
+            -0.9274294376373291,
+            0.24764552712440491,
+            0.016000635921955109,
+            0.987263023853302,
+            -0.15829004347324371,
+            -0.14498250186443329,
+            0.94002807140350342,
+            0.039093408733606339,
+            0.33884954452514648,
+            -0.28076839447021484,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.308725357
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99845618009567261,
+              "X": 0.031571719795465469,
+              "Y": 0.031875763088464737,
+              "Z": -0.032748714089393616
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30516940355300903,
+            0.0772416889667511,
+            -0.94916057586669922,
+            0.27243557572364807,
+            -0.030069665983319283,
+            0.9969896674156189,
+            0.071466132998466492,
+            0.20038951933383942,
+            0.95182347297668457,
+            0.0067316405475139618,
+            0.30657339096069336,
+            -0.3067900538444519,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.33997172117233276,
+            -0.15307718515396118,
+            -0.92789375782012939,
+            0.24764350056648254,
+            0.01447952538728714,
+            0.98739868402481079,
+            -0.15758875012397766,
+            -0.14510154724121094,
+            0.94032430648803711,
+            0.04014027863740921,
+            0.33790409564971924,
+            -0.28085649013519287,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.317186356
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99845379590988159,
+              "X": 0.031313002109527588,
+              "Y": 0.03193347156047821,
+              "Z": -0.033010523766279221
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30598241090774536,
+            0.0786263644695282,
+            -0.94878494739532471,
+            0.27239099144935608,
+            -0.030309313908219337,
+            0.99688315391540527,
+            0.072837561368942261,
+            0.20029410719871521,
+            0.95155465602874756,
+            0.0064699910581111908,
+            0.30741184949874878,
+            -0.30694735050201416,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34141546487808228,
+            -0.15181700885295868,
+            -0.927570641040802,
+            0.24767018854618073,
+            0.017092570662498474,
+            0.9877086877822876,
+            -0.15536858141422272,
+            -0.14514505863189697,
+            0.93975716829299927,
+            0.037190690636634827,
+            0.33981400728225708,
+            -0.28109711408615112,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.325508118
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99846798181533813,
+              "X": 0.030743449926376343,
+              "Y": 0.031776003539562225,
+              "Z": -0.033269193023443222
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.306318998336792,
+            0.079375803470611572,
+            -0.94861400127410889,
+            0.27237793803215027,
+            -0.030190669000148773,
+            0.99682623147964478,
+            0.073661066591739655,
+            0.20025841891765594,
+            0.95145022869110107,
+            0.0060754865407943726,
+            0.30774325132369995,
+            -0.30698835849761963,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34244781732559204,
+            -0.15186658501625061,
+            -0.92718183994293213,
+            0.24767309427261353,
+            0.018377862870693207,
+            0.98774373531341553,
+            -0.1549985408782959,
+            -0.14512886106967926,
+            0.93935716152191162,
+            0.036039296537637711,
+            0.3410416841506958,
+            -0.28116738796234131,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.3333912
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99847936630249023,
+              "X": 0.03049931675195694,
+              "Y": 0.031578831374645233,
+              "Z": -0.033336799591779709
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30682563781738281,
+            0.081192396581172943,
+            -0.94829648733139038,
+            0.27244549989700317,
+            -0.029142683371901512,
+            0.996688961982727,
+            0.075906500220298767,
+            0.20011648535728455,
+            0.95131963491439819,
+            0.0043458230793476105,
+            0.30817592144012451,
+            -0.30692517757415771,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.3442305326461792,
+            -0.15261054039001465,
+            -0.926399290561676,
+            0.2476261705160141,
+            0.019713781774044037,
+            0.98765856027603149,
+            -0.15537688136100769,
+            -0.14510230720043182,
+            0.9386783242225647,
+            0.035222660750150681,
+            0.34299075603485107,
+            -0.2813183069229126,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.342079163
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99847924709320068,
+              "X": 0.030468655750155449,
+              "Y": 0.031212972477078438,
+              "Z": -0.033713892102241516
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30748647451400757,
+            0.0823289304971695,
+            -0.94798427820205688,
+            0.27248790860176086,
+            -0.028693024069070816,
+            0.99659925699234009,
+            0.077244147658348083,
+            0.20000191032886505,
+            0.95111984014511108,
+            0.0034489966928958893,
+            0.30880308151245117,
+            -0.30692565441131592,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34550690650939941,
+            -0.15304940938949585,
+            -0.925851583480835,
+            0.24753642082214355,
+            0.02014835923910141,
+            0.98759305477142334,
+            -0.15573680400848389,
+            -0.14515338838100433,
+            0.93819999694824219,
+            0.035153765231370926,
+            0.34430390596389771,
+            -0.28161466121673584,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.349908829
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.998483419418335,
+              "X": 0.030350174754858017,
+              "Y": 0.030987858772277832,
+              "Z": -0.033903397619724274
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30772721767425537,
+            0.082477360963821411,
+            -0.94789344072341919,
+            0.27249586582183838,
+            -0.028817063197493553,
+            0.99658674001693726,
+            0.07735898345708847,
+            0.1999523937702179,
+            0.9510384202003479,
+            0.0035100057721138,
+            0.30905359983444214,
+            -0.306968092918396,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34643805027008057,
+            -0.15390124917030334,
+            -0.92536234855651855,
+            0.24741873145103455,
+            0.021032840013504028,
+            0.98747658729553223,
+            -0.15635749697685242,
+            -0.14515398442745209,
+            0.93783724308013916,
+            0.034705221652984619,
+            0.3453364372253418,
+            -0.28195494413375854,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.357591629
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99848008155822754,
+              "X": 0.030342984944581985,
+              "Y": 0.030780566856265068,
+              "Z": -0.034194033592939377
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30767059326171875,
+            0.08208591490983963,
+            -0.94794559478759766,
+            0.27249127626419067,
+            -0.028829634189605713,
+            0.99661856889724731,
+            0.076943576335906982,
+            0.19994871318340302,
+            0.95105612277984619,
+            0.0036556459963321686,
+            0.30899673700332642,
+            -0.30699253082275391,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.34481751918792725,
+            -0.15580755472183228,
+            -0.92564851045608521,
+            0.24720694124698639,
+            0.019723035395145416,
+            0.98711276054382324,
+            -0.15880629420280457,
+            -0.14505502581596375,
+            0.93846267461776733,
+            0.036502610892057419,
+            0.34344673156738281,
+            -0.28220784664154053,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.3668995
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.9984743595123291,
+              "X": 0.030364062637090683,
+              "Y": 0.030780540779232979,
+              "Z": -0.034343916922807693
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30730080604553223,
+            0.081420063972473145,
+            -0.948123037815094,
+            0.2724994421005249,
+            -0.028591135516762733,
+            0.99667316675186157,
+            0.0763225108385086,
+            0.19993023574352264,
+            0.951183021068573,
+            0.0036539323627948761,
+            0.30860632658004761,
+            -0.30699503421783447,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.33990448713302612,
+            -0.16414554417133331,
+            -0.92602449655532837,
+            0.24654360115528107,
+            0.0092732608318328857,
+            0.98518764972686768,
+            -0.17122890055179596,
+            -0.14472962915897369,
+            0.94041436910629272,
+            0.049614217132329941,
+            0.3363918662071228,
+            -0.28266561031341553,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.3745861
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99846887588500977,
+              "X": 0.03026341088116169,
+              "Y": 0.030733341351151466,
+              "Z": -0.034635495394468307
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.3066367506980896,
+            0.080602802336215973,
+            -0.948407769203186,
+            0.27252522110939026,
+            -0.027735410258173943,
+            0.996741533279419,
+            0.075743243098258972,
+            0.19984130561351776,
+            0.95142257213592529,
+            0.003078807145357132,
+            0.30787312984466553,
+            -0.30698549747467041,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.33432483673095703,
+            -0.16975593566894531,
+            -0.92704367637634277,
+            0.2460370808839798,
+            0.0032082200050354004,
+            0.98384386301040649,
+            -0.17899994552135468,
+            -0.14451116323471069,
+            0.94245254993438721,
+            0.056869972497224808,
+            0.32946807146072388,
+            -0.28250569105148315,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.384147644
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99847400188446045,
+              "X": 0.030166132375597954,
+              "Y": 0.030435565859079361,
+              "Z": -0.034833997488021851
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30621546506881714,
+            0.0799001008272171,
+            -0.94860339164733887,
+            0.27251872420310974,
+            -0.026680516079068184,
+            0.99680036306381226,
+            0.075347058475017548,
+            0.19974885880947113,
+            0.95158839225769043,
+            0.0022367760539054871,
+            0.30736744403839111,
+            -0.306995153427124,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.32218927145004272,
+            -0.16773681342601776,
+            -0.93169677257537842,
+            0.24543258547782898,
+            0.0060418695211410522,
+            0.98452180624008179,
+            -0.1751578152179718,
+            -0.14459037780761719,
+            0.94665622711181641,
+            0.050804805010557175,
+            0.31821578741073608,
+            -0.28223991394042969,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.391553879
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99847078323364258,
+              "X": 0.029997637495398521,
+              "Y": 0.030476324260234833,
+              "Z": -0.035034999251365662
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30591249465942383,
+            0.079661428928375244,
+            -0.94872111082077026,
+            0.27244746685028076,
+            -0.025564327836036682,
+            0.99682128429412842,
+            0.0754571259021759,
+            0.19968010485172272,
+            0.95171648263931274,
+            0.0011701323091983795,
+            0.3069765567779541,
+            -0.3070216178894043,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31825739145278931,
+            -0.17528626322746277,
+            -0.93165832757949829,
+            0.24491731822490692,
+            0.0069460049271583557,
+            0.9831620454788208,
+            -0.182603657245636,
+            -0.14456360042095184,
+            0.94797903299331665,
+            0.051643684506416321,
+            0.31411612033843994,
+            -0.28242641687393188,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.400068283
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99847608804702759,
+              "X": 0.029803097248077393,
+              "Y": 0.03033178485929966,
+              "Z": -0.035174280405044556
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.305664598941803,
+            0.080185011029243469,
+            -0.948756992816925,
+            0.27227962017059326,
+            -0.023464350029826164,
+            0.99677932262420654,
+            0.076684072613716125,
+            0.19946190714836121,
+            0.95185023546218872,
+            -0.0011776573956012726,
+            0.30656164884567261,
+            -0.30710959434509277,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31706315279006958,
+            -0.17552196979522705,
+            -0.93202114105224609,
+            0.24465121328830719,
+            0.011859960854053497,
+            0.98338216543197632,
+            -0.18115991353988647,
+            -0.14470276236534119,
+            0.94833052158355713,
+            0.046385444700717926,
+            0.31387591361999512,
+            -0.28246569633483887,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.4102211
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99846726655960083,
+              "X": 0.029683444648981094,
+              "Y": 0.030184296891093254,
+              "Z": -0.035651400685310364
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30611175298690796,
+            0.081021368503570557,
+            -0.94854176044464111,
+            0.27218100428581238,
+            -0.023062342777848244,
+            0.99671053886413574,
+            0.0776931643486023,
+            0.19933871924877167,
+            0.951716423034668,
+            -0.0019072145223617554,
+            0.306973397731781,
+            -0.30719053745269775,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31326192617416382,
+            -0.17405450344085693,
+            -0.93358039855957031,
+            0.24452765285968781,
+            0.012537002563476563,
+            0.98373311758041382,
+            -0.17919813096523285,
+            -0.14479345083236694,
+            0.9495842456817627,
+            0.044431686401367188,
+            0.3103482723236084,
+            -0.2824019193649292,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.418079376
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99844688177108765,
+              "X": 0.029719680547714233,
+              "Y": 0.030323758721351624,
+              "Z": -0.036068949848413467
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30814814567565918,
+            0.084242425858974457,
+            -0.94760113954544067,
+            0.27190321683883667,
+            -0.023437537252902985,
+            0.9964415431022644,
+            0.080962777137756348,
+            0.19885735213756561,
+            0.95104962587356567,
+            -0.0027390904724597931,
+            0.30902606248855591,
+            -0.30753535032272339,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.32782930135726929,
+            -0.16393812000751495,
+            -0.93040460348129272,
+            0.2448488175868988,
+            0.030055269598960876,
+            0.986140251159668,
+            -0.16316883265972137,
+            -0.14495997130870819,
+            0.944258987903595,
+            0.025528013706207275,
+            0.3282129168510437,
+            -0.28362518548965454,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.42675972
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99843031167984009,
+              "X": 0.0295027494430542,
+              "Y": 0.03027060441672802,
+              "Z": -0.036746036261320114
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.30921453237533569,
+            0.08564392477273941,
+            -0.9471280574798584,
+            0.27178823947906494,
+            -0.023150786757469177,
+            0.99631935358047485,
+            0.082533866167068481,
+            0.19861507415771484,
+            0.95071053504943848,
+            -0.0035939216613769531,
+            0.310059130191803,
+            -0.30769217014312744,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.33482640981674194,
+            -0.16421887278556824,
+            -0.92785978317260742,
+            0.24458654224872589,
+            0.040649868547916412,
+            0.986297070980072,
+            -0.15989266335964203,
+            -0.14481087028980255,
+            0.941402792930603,
+            0.015818953514099121,
+            0.3369138240814209,
+            -0.284415602684021,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.4411373
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99842602014541626,
+              "X": 0.029372332617640495,
+              "Y": 0.030216353014111519,
+              "Z": -0.037010367959737778
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.310776948928833,
+            0.087540760636329651,
+            -0.94644308090209961,
+            0.27156999707221985,
+            -0.020459119230508804,
+            0.99613505601882935,
+            0.085418984293937683,
+            0.19824585318565369,
+            0.95026278495788574,
+            -0.0071828737854957581,
+            0.31136685609817505,
+            -0.30794048309326172,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.33830422163009644,
+            -0.17037490010261536,
+            -0.92548513412475586,
+            0.24434038996696472,
+            0.033656410872936249,
+            0.98503530025482178,
+            -0.16903480887413025,
+            -0.14454539120197296,
+            0.94043481349945068,
+            0.026036687195301056,
+            0.33897578716278076,
+            -0.2846827507019043,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.4504738
+    },
+    {
+      "headTarget": {
+        "Id": {
+          "Id": 0,
+          "Name": "head"
+        },
+        "JointsGoal": {
+          "Rotation": {
+            "Q": {
+              "W": 0.99841827154159546,
+              "X": 0.029370075091719627,
+              "Y": 0.03009902685880661,
+              "Z": -0.037315480411052704
+            },
+            "Rpy": null,
+            "Matrix": null,
+            "RotationCase": 1
+          }
+        },
+        "Duration": null
+      },
+      "leftEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.31101971864700317,
+            0.0876878947019577,
+            -0.94634974002838135,
+            0.27151533961296082,
+            -0.019604552537202835,
+            0.99611467123031616,
+            0.08585599809885025,
+            0.19819511473178864,
+            0.95020139217376709,
+            -0.0081501603126525879,
+            0.31153035163879395,
+            -0.30798459053039551,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "rightEndEffector": {
+        "Id": null,
+        "GoalPose": {
+          "Data": [
+            0.33765828609466553,
+            -0.17757375538349152,
+            -0.92436724901199341,
+            0.2440759688615799,
+            0.021508440375328064,
+            0.98324286937713623,
+            -0.18102726340293884,
+            -0.1442876011133194,
+            0.94102317094802856,
+            0.041243694722652435,
+            0.33581948280334473,
+            -0.284906268119812,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "PositionTolerance": null,
+        "OrientationTolerance": null,
+        "Q0": null,
+        "ConstrainedMode": 0,
+        "PreferredTheta": null,
+        "DThetaMax": null,
+        "ContinuousMode": 0,
+        "Duration": null,
+        "OrderId": null
+      },
+      "timestamp": 0.4579754
+    }
+  ]
+}

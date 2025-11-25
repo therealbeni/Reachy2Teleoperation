@@ -59,9 +59,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DanceAfterReachyScene.unity
     guid: a9c74a943381fd842b0a72116a0e3dae
+  - enabled: 0
+    path: Assets/Scenes/OLDPassthroughScene.unity
+    guid: 8bd3650456975d84eb4cb53c6f86157d
   - enabled: 1
     path: Assets/Scenes/PassthroughScene.unity
-    guid: 8bd3650456975d84eb4cb53c6f86157d
+    guid: aa20ed2b3533dfb44a8544e588dc4ce0
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: dc6a806ef662cb147ad93895dfa0e8e2, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 78b607dc7e3ef3243bf108c9070f83f7, type: 2}
