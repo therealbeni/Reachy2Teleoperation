@@ -54,6 +54,8 @@ namespace TeleopReachy
             // BaseScene (build index 0) starts with this manager.
             // First thing: show ConnectionScene with tracking OFF.
             SceneManager.LoadScene(CONNECTION_SCENE, LoadSceneMode.Additive);
+            SetPassthrough(true);
+
 
             // Global quit
             EventManager.StartListening(EventNames.QuitApplication, QuitApplication);
@@ -63,6 +65,8 @@ namespace TeleopReachy
 
             // ConnectionScene → MenuScene after successful connect
             EventManager.StartListening(EventNames.QuitConnectionScene, UnloadConnectionSceneAndLoadMenuScene);
+
+            EventManager.StartListening(EventNames.EnterConnectionFromMenuScene, UnloadMenuSceneAndLoadConnectionScene);
 
             // Menu → Safety (three modes)
             EventManager.StartListening(EventNames.EnterSafetyDanceAfterReachyScene, LoadSafetyDanceAfterReachyEndUnloadMenu);
@@ -124,14 +128,23 @@ namespace TeleopReachy
             }
         }
 
+        private void UnloadMenuSceneAndLoadConnectionScene()
+        {
+            UnloadSceneIfLoaded(MENU_SCENE);
+            ground.SetActive(true);
+            SetTrackingEnabled(false); // non-VR
+            SetPassthrough(true);
+            LoadConnectionScene();
+        }
+
         private void UnloadSafetyLoadMenu()
         {
             UnloadSceneIfLoaded(SAFETY_DANCE_AFTER_REACHY);
             UnloadSceneIfLoaded(SAFETY_TABLETOP);
             UnloadSceneIfLoaded(SAFETY_DANCE_TELEOP);
             ground.SetActive(true);
-            SetTrackingEnabled(false); // non-VR
-            SetPassthrough(false);
+            SetTrackingEnabled(true); // non-VR
+            SetPassthrough(true);
 
             if (!SceneManager.GetSceneByName(MENU_SCENE).isLoaded)
                 SceneManager.LoadScene(MENU_SCENE, LoadSceneMode.Additive);
@@ -155,7 +168,7 @@ namespace TeleopReachy
             UnloadSceneIfLoaded(MIRROR_TABLETOP);
             UnloadSceneIfLoaded(MIRROR_DANCE);
             UnloadSceneIfLoaded(DANCE_AFTER_REACHY_SCENE);
-            ground.SetActive(false);
+            //ground.SetActive(false);
         }
 
         private void UnloadAllTeleopScenes()
@@ -174,9 +187,9 @@ namespace TeleopReachy
             Debug.Log("Loading Connection Scene");
 
 
-            ground.SetActive(true);
+            //ground.SetActive(true);
             SetTrackingEnabled(false);
-            SetPassthrough(false);
+            SetPassthrough(true);
 
             if (!SceneManager.GetSceneByName(CONNECTION_SCENE).isLoaded)
                 SceneManager.LoadScene(CONNECTION_SCENE, LoadSceneMode.Additive);
@@ -191,8 +204,9 @@ namespace TeleopReachy
             UnloadSceneIfLoaded(MENU_SCENE);
 
             SetTrackingEnabled(false);
-            SetPassthrough(false);
-            LoadConnectionScene();
+            SetPassthrough(true);
+            if (!SceneManager.GetSceneByName(MENU_SCENE).isLoaded)
+                SceneManager.LoadScene(MENU_SCENE, LoadSceneMode.Additive);
         }
 
         private void UnloadConnectionSceneAndLoadMenuScene()
@@ -202,7 +216,7 @@ namespace TeleopReachy
 
             ground.SetActive(true);
             SetTrackingEnabled(false); // still non-VR
-            SetPassthrough(false);
+            SetPassthrough(true);
 
             if (!SceneManager.GetSceneByName(MENU_SCENE).isLoaded)
                 SceneManager.LoadScene(MENU_SCENE, LoadSceneMode.Additive);
@@ -237,7 +251,7 @@ namespace TeleopReachy
 
             ground.SetActive(true);
             SetTrackingEnabled(false); // still non-VR
-            SetPassthrough(false);
+            SetPassthrough(true);
 
             if (!SceneManager.GetSceneByName(safetySceneName).isLoaded)
                 SceneManager.LoadScene(safetySceneName, LoadSceneMode.Additive);

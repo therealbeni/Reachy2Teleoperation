@@ -27,7 +27,7 @@ namespace TeleopReachy
         EnterTabletopMirrorScene,           // SafetyTabletop -> TabletopMirrorScene
         EnterDanceMirrorScene,              // SafetyScene -> DanceMirrorScene
         EnterPasstroughFromSafetyScene,     // SafetyDanceAfterReachy -> Passtrough
-                                            // --- end NEW ---
+        EnterConnectionFromMenuScene,       // --- end NEW ---
 
 
         // new navigation events
