@@ -2250,8 +2250,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1440600536130867594, guid: 770664eca1f4897479c79fc61a6ab5f5, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440600536130867594, guid: 770664eca1f4897479c79fc61a6ab5f5, type: 3}
       propertyPath: near clip plane
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440600536130867594, guid: 770664eca1f4897479c79fc61a6ab5f5, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440600536130867594, guid: 770664eca1f4897479c79fc61a6ab5f5, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440600536130867594, guid: 770664eca1f4897479c79fc61a6ab5f5, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440600536130867594, guid: 770664eca1f4897479c79fc61a6ab5f5, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1440600536130867594, guid: 770664eca1f4897479c79fc61a6ab5f5, type: 3}
       propertyPath: m_CullingMask.m_Bits

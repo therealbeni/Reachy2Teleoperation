@@ -50,9 +50,10 @@ namespace TeleopReachy
 
         private void Start()
         {
+
             // BaseScene (build index 0) starts with this manager.
             // First thing: show ConnectionScene with tracking OFF.
-            LoadConnectionScene();
+            SceneManager.LoadScene(CONNECTION_SCENE, LoadSceneMode.Additive);
 
             // Global quit
             EventManager.StartListening(EventNames.QuitApplication, QuitApplication);
@@ -110,14 +111,17 @@ namespace TeleopReachy
 #endif
         }
 
-        // ---------------------------------------------------------------------
-        // Helper utilities
-        // ---------------------------------------------------------------------
+            // ---------------------------------------------------------------------
+            // Helper utilities
+            // ---------------------------------------------------------------------
         private void SetPassthrough(bool enabled)
         {
             if (passthrough != null)
+            {
                 passthrough.SetPassthrough(enabled);
                 skybox.SetActive(!enabled);
+                ground.SetActive(!enabled);
+            }
         }
 
         private void UnloadSafetyLoadMenu()
@@ -169,8 +173,9 @@ namespace TeleopReachy
         {
             Debug.Log("Loading Connection Scene");
 
+
             ground.SetActive(true);
-            SetTrackingEnabled(false); // no VR in Connection
+            SetTrackingEnabled(false);
             SetPassthrough(false);
 
             if (!SceneManager.GetSceneByName(CONNECTION_SCENE).isLoaded)
