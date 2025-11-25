@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pose1
   m_EditorClassIdentifier: 
   stepName: TEST
-  duration: 3
+  duration: 1
   rightArmJoints:
   - 0
   - 10
@@ -32,5 +32,5 @@ MonoBehaviour:
   - 0
   headJoints:
   - 45
-  - -20
-  - -15
+  - 0
+  - 0

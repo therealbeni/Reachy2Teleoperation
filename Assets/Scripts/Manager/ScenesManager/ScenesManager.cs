@@ -11,6 +11,7 @@ namespace TeleopReachy
         public GameObject userInput = null;
         public GameObject ground = null;
         public GameObject XROrigin = null;
+        public GameObject skybox = null;
 
         private PassthroughController passthrough;
 
@@ -41,7 +42,7 @@ namespace TeleopReachy
         private const string TELEOP_DANCE = "DanceTeleoperationScene";        // Mode 3 teleop
 
         // Dance after Reachy Scene
-        private const string DANCE_AFTER_REACHY_SCENE = "DanceAfterReachyScene"; // Mode 1 Dance after Reachy Scene
+        private const string DANCE_AFTER_REACHY_SCENE = "PassthroughScene"; // Mode 1 Dance after Reachy Scene (Passthrough)
 
         // ---------------------------------------------------------------------
         // Lifecycle
@@ -116,6 +117,7 @@ namespace TeleopReachy
         {
             if (passthrough != null)
                 passthrough.SetPassthrough(enabled);
+                skybox.SetActive(!enabled);
         }
 
         private void UnloadSafetyLoadMenu()
@@ -148,6 +150,7 @@ namespace TeleopReachy
             UnloadSceneIfLoaded(MIRROR_DEFAULT);
             UnloadSceneIfLoaded(MIRROR_TABLETOP);
             UnloadSceneIfLoaded(MIRROR_DANCE);
+            UnloadSceneIfLoaded(DANCE_AFTER_REACHY_SCENE);
             ground.SetActive(false);
         }
 
@@ -216,6 +219,7 @@ namespace TeleopReachy
             LoadSafetyScene(SAFETY_TABLETOP);
         }
 
+
         private void LoadSafetyDanceTeleopEndUnloadMenu()
         {
             UnloadSceneIfLoaded(MENU_SCENE);
@@ -247,8 +251,7 @@ namespace TeleopReachy
             SetTrackingEnabled(true);
             SetPassthrough(true);
 
-            if (!SceneManager.GetSceneByName(DANCE_AFTER_REACHY_SCENE).isLoaded)
-                SceneManager.LoadScene(DANCE_AFTER_REACHY_SCENE, LoadSceneMode.Additive);
+            StartCoroutine(LoadRobotDataSceneAndMirrorScene(DANCE_AFTER_REACHY_SCENE));
         }
 
         // MODE 2: Tabletop
@@ -286,6 +289,10 @@ namespace TeleopReachy
         {
             ground.SetActive(true);
             SetPassthrough(false);
+
+            if (mirrorSceneName == DANCE_AFTER_REACHY_SCENE)
+                SetPassthrough(true);
+
             StartCoroutine(LoadTransitionRoom(mirrorSceneName));
         }
 
