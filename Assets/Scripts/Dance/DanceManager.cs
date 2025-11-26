@@ -6,40 +6,23 @@ using TeleopReachy;
 using Reachy.Part.Head;
 using Reachy.Part.Arm;
 using Reachy2Controller;
-using Newtonsoft.Json;   // make sure Newtonsoft.Json is available in the project
+using Newtonsoft.Json;
+using Reachy.Part;   // used indirectly by DanceSerializer
 
 public class DanceManager : MonoBehaviour
 {
-    [Serializable]
-    private class PoseSample
-    {
-        public NeckJointGoal headTarget;
-        public ArmCartesianGoal leftEndEffector;
-        public ArmCartesianGoal rightEndEffector;
-        public float timestamp;
-    }
-
-    [Serializable]
-    private class DanceRecordingData
-    {
-        public List<PoseSample> samples = new List<PoseSample>();
-    }
-
     [Header("Recording")]
     [Tooltip("Folder (relative to Application.dataPath) where dance JSON files are saved. Must match DanceRecorder.")]
     public string recordingsFolderName = "dance_recordings";
 
     [Tooltip("Name of the recording file, e.g. 'dance_20251125_163343.json'.")]
-    public string recordingFileName = "dance_20251125_163343.json";
+    public string recordingFileName = "dance_not_here.json";
 
     [Header("Playback")]
-    [Tooltip("Automatically start playback once robot + recording are ready.")]
-    public bool autoPlayOnStart = true;
-
     [Tooltip("Play the recording in a loop.")]
     public bool loop = false;
 
-    [Tooltip("Speed multiplier (1 = real time, 2 = twice as fast, 0.5 = half speed).")]
+    [Tooltip("Speed multiplier (1 = real time)")]
     public float playbackSpeed = 1.0f;
 
     [Header("Home pose / safety")]
@@ -54,7 +37,7 @@ public class DanceManager : MonoBehaviour
 
     [Header("Simulation (optional)")]
     [Tooltip("If assigned, the simulated Reachy will also be driven by the recording.")]
-    public ReachySimulatedServer simulatedServer;
+    public DanceSimulationServer simulatedServer;
 
     private enum PlaybackPhase
     {
@@ -66,8 +49,10 @@ public class DanceManager : MonoBehaviour
 
     private PlaybackPhase phase = PlaybackPhase.Idle;
 
-    private DanceRecordingData recording;
-    private PoseSample homePose;
+    // Recording + samples (DTO)
+    private DanceSerializer.DanceRecordingData recording;
+    private DanceSerializer.PoseSampleData homePose;
+
     private float phaseStartTime;
     private float playbackStartTime;
     private int currentSampleIndex;
@@ -84,13 +69,7 @@ public class DanceManager : MonoBehaviour
         LoadRecording();
     }
 
-    private void Start()
-    {
-        if (autoPlayOnStart && robotReady && recording != null && recording.samples.Count > 0)
-        {
-            StartPlayback();
-        }
-    }
+    // Removed automatic playback from Start()
 
     private void InitRobotRefs()
     {
@@ -132,8 +111,7 @@ public class DanceManager : MonoBehaviour
 
         try
         {
-            string json = File.ReadAllText(filePath);
-            recording = JsonConvert.DeserializeObject<DanceRecordingData>(json);
+            recording = DanceSerializer.LoadFromFile(filePath);
 
             if (recording == null || recording.samples == null || recording.samples.Count == 0)
             {
@@ -141,20 +119,28 @@ public class DanceManager : MonoBehaviour
                 return false;
             }
 
-            homePose = recording.samples[0]; // first sample used as home pose
+            homePose = recording.samples[0]; // first sample = home pose
             Debug.Log($"DanceManager: Loaded recording: {filePath} ({recording.samples.Count} samples)");
             return true;
         }
         catch (Exception e)
         {
-            Debug.LogError($"DanceManager: Failed to load recording from {filePath}. Exception: {e}");
+            Debug.LogError($"DanceManager: Failed to load recording. Exception: {e}");
             return false;
         }
     }
 
+    // ---------- PUBLIC METHOD FOR BUTTON ----------
+    public void OnStartButtonPressed()
+    {
+        Debug.Log("DanceManager: OnStartButtonPressed called.");
+        StartPlayback();
+    }
+    // ----------------------------------------------
+
     public void StartPlayback()
     {
-        if (recording == null || recording.samples == null || recording.samples.Count == 0)
+        if (recording == null || recording.samples.Count == 0)
         {
             Debug.LogWarning("DanceManager: No recording loaded, cannot start playback.");
             return;
@@ -162,7 +148,7 @@ public class DanceManager : MonoBehaviour
 
         if (!robotReady)
         {
-            Debug.LogWarning("DanceManager: Robot is not initialized, cannot start playback.");
+            Debug.LogWarning("DanceManager: Robot not initialized, cannot start playback.");
             return;
         }
 
@@ -180,9 +166,9 @@ public class DanceManager : MonoBehaviour
             playbackStartTime = Time.time;
         }
 
-        // Optional: stiffen robot and broadcast that something is controlling it
+        // Robot stiffen / control takeover
         EventManager.TriggerEvent(EventNames.OnRobotStiffRequested);
-        EventManager.TriggerEvent(EventNames.OnStartTeleoperation);
+        //EventManager.TriggerEvent(EventNames.OnStartTeleoperation);
 
         Debug.Log("DanceManager: Started playback.");
     }
@@ -194,9 +180,10 @@ public class DanceManager : MonoBehaviour
 
         isPlaying = false;
         phase = PlaybackPhase.Idle;
+
         Debug.Log("DanceManager: Stopped playback.");
 
-        EventManager.TriggerEvent(EventNames.OnStopTeleoperation);
+        //EventManager.TriggerEvent(EventNames.OnStopTeleoperation);
         EventManager.TriggerEvent(EventNames.OnRobotCompliantRequested);
     }
 
@@ -213,13 +200,15 @@ public class DanceManager : MonoBehaviour
             case PlaybackPhase.HomeStart:
                 PlayHomeStartPhase();
                 break;
+
             case PlaybackPhase.Playing:
                 PlayMainPhase();
                 break;
+
             case PlaybackPhase.HomeEnd:
                 PlayHomeEndPhase();
                 break;
-            case PlaybackPhase.Idle:
+
             default:
                 break;
         }
@@ -287,29 +276,35 @@ public class DanceManager : MonoBehaviour
         }
     }
 
-    private void SendPose(PoseSample pose)
+    private void SendPose(DanceSerializer.PoseSampleData pose)
     {
         if (pose == null)
             return;
 
+        // Convert DTOs back to runtime goals
+        NeckJointGoal headGoal = DanceSerializer.ToNeckJointGoal(pose.headTarget);
+        ArmCartesianGoal leftGoal = DanceSerializer.ToArmCartesianGoal(pose.leftArm);
+        ArmCartesianGoal rightGoal = DanceSerializer.ToArmCartesianGoal(pose.rightArm);
+
+        if (leftGoal != null && leftGoal.Id == null)
+            leftGoal.Id = new PartId { Name = "l_arm" };
+
+        if (rightGoal != null && rightGoal.Id == null)
+            rightGoal.Id = new PartId { Name = "r_arm" };
+
         // Real robot
-        jointsCommands.SendNeckCommands(pose.headTarget);
-        jointsCommands.SendArmsCommands(pose.leftEndEffector, pose.rightEndEffector);
+        if (headGoal != null)
+            jointsCommands.SendNeckCommands(headGoal);
 
-        Debug.Log("DanceManager: Sent pose at timestamp " + pose.timestamp);
+        if (leftGoal != null || rightGoal != null)
+            jointsCommands.SendArmsCommands(leftGoal, rightGoal);
 
-        // Simulated robot (optional)
+        // Simulated robot
         if (simulatedServer != null)
         {
-            if (pose.headTarget != null)
-                Debug.Log("DanceManager: Sending head command to simulated server.");
-                simulatedServer.SendNeckCommand(pose.headTarget);
-
-            if (pose.leftEndEffector != null)
-                simulatedServer.SendArmCommand(pose.leftEndEffector);
-
-            if (pose.rightEndEffector != null)
-                simulatedServer.SendArmCommand(pose.rightEndEffector);
+            if (headGoal != null) simulatedServer.SendNeckCommand(headGoal);
+            if (leftGoal != null) simulatedServer.SendArmCommand(leftGoal);
+            if (rightGoal != null) simulatedServer.SendArmCommand(rightGoal);
         }
     }
 }

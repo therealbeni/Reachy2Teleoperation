@@ -5,25 +5,10 @@ using System.Collections.Generic;
 using System.IO;
 using TeleopReachy;
 using UnityEngine;
-using Newtonsoft.Json;   // <-- make sure the Newtonsoft.Json package is in the project
+using Newtonsoft.Json;  
 
 public class DanceRecorder : MonoBehaviour
 {
-    [Serializable]
-    public class PoseSample
-    {
-        public NeckJointGoal headTarget;
-        public ArmCartesianGoal leftEndEffector;
-        public ArmCartesianGoal rightEndEffector;
-        public float timestamp;
-    }
-
-    [Serializable]
-    public class DanceRecordingData
-    {
-        public List<PoseSample> samples = new List<PoseSample>();
-    }
-
     [Header("Recording")]
     public bool allowRecording = true;
 
@@ -40,7 +25,10 @@ public class DanceRecorder : MonoBehaviour
     private UserMovementsInput userMovementsInput;
     private bool isRecording = false;
     private float recordingStartTime = 0.0f;
-    private readonly List<PoseSample> recordedSamples = new List<PoseSample>();
+
+    // Now we store the DTOs defined in DanceSerializer
+    private readonly List<DanceSerializer.PoseSampleData> recordedSamples =
+        new List<DanceSerializer.PoseSampleData>();
 
     private void InitUserInputs()
     {
@@ -140,17 +128,20 @@ public class DanceRecorder : MonoBehaviour
             return;
         }
 
+        // Get live teleop targets
         NeckJointGoal headTarget = userMovementsInput.GetHeadTarget();
         ArmCartesianGoal leftEndEffector = userMovementsInput.GetLeftEndEffectorTarget();
         ArmCartesianGoal rightEndEffector = userMovementsInput.GetRightEndEffectorTarget();
 
-        PoseSample sample = new PoseSample
-        {
-            timestamp = Time.time - recordingStartTime,
-            headTarget = headTarget,
-            leftEndEffector = leftEndEffector,
-            rightEndEffector = rightEndEffector
-        };
+        float timestamp = Time.time - recordingStartTime;
+
+        // Convert to DTO using DanceSerializer
+        var sample = DanceSerializer.CreatePoseSample(
+            headTarget,
+            leftEndEffector,
+            rightEndEffector,
+            timestamp
+        );
 
         recordedSamples.Add(sample);
     }
@@ -163,14 +154,11 @@ public class DanceRecorder : MonoBehaviour
             return;
         }
 
-        DanceRecordingData data = new DanceRecordingData
+        // Wrap into DanceSerializer.DanceRecordingData and save via DanceSerializer
+        var data = new DanceSerializer.DanceRecordingData
         {
-            samples = new List<PoseSample>(recordedSamples)
+            samples = new List<DanceSerializer.PoseSampleData>(recordedSamples)
         };
-
-        // Use Newtonsoft.Json so complex types like NeckJointGoal / ArmCartesianGoal
-        // are serialized (as long as they expose public fields/properties).
-        string json = JsonConvert.SerializeObject(data, Formatting.Indented);
 
         string folderPath = Path.Combine(Application.dataPath, recordingsFolderName);
         if (!Directory.Exists(folderPath))
@@ -184,7 +172,7 @@ public class DanceRecorder : MonoBehaviour
 
         try
         {
-            File.WriteAllText(filePath, json);
+            DanceSerializer.SaveToFile(data, filePath);
             Debug.Log($"DanceRecorder: Saved dance recording to: {filePath}");
         }
         catch (Exception e)
@@ -198,8 +186,7 @@ public class DanceRecorder : MonoBehaviour
         if (!allowRecording)
             return;
 
-        // Editor keyboard test (optional, but useful to debug the indicator
-        // even without the headset / OVR input).
+        // Editor keyboard test (optional)
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.R))
         {
