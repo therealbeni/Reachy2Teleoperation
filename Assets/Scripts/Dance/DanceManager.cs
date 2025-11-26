@@ -184,7 +184,7 @@ public class DanceManager : MonoBehaviour
         Debug.Log("DanceManager: Stopped playback.");
 
         EventManager.TriggerEvent(EventNames.OnStopDance);
-        EventManager.TriggerEvent(EventNames.OnRobotCompliantRequested);
+        EventManager.TriggerEvent(EventNames.OnRobotSmoothlyCompliantRequested);
     }
 
     private void Update()
