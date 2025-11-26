@@ -100,7 +100,7 @@ public class DanceManager : MonoBehaviour
             return false;
         }
 
-        string folderPath = Path.Combine(Application.dataPath, recordingsFolderName);
+        string folderPath = Path.Combine(Application.streamingAssetsPath, recordingsFolderName);
         string filePath = Path.Combine(folderPath, recordingFileName);
 
         if (!File.Exists(filePath))
@@ -168,7 +168,7 @@ public class DanceManager : MonoBehaviour
 
         // Robot stiffen / control takeover
         EventManager.TriggerEvent(EventNames.OnRobotStiffRequested);
-        //EventManager.TriggerEvent(EventNames.OnStartTeleoperation);
+        EventManager.TriggerEvent(EventNames.OnStartDance);
 
         Debug.Log("DanceManager: Started playback.");
     }
@@ -183,7 +183,7 @@ public class DanceManager : MonoBehaviour
 
         Debug.Log("DanceManager: Stopped playback.");
 
-        //EventManager.TriggerEvent(EventNames.OnStopTeleoperation);
+        EventManager.TriggerEvent(EventNames.OnStopDance);
         EventManager.TriggerEvent(EventNames.OnRobotCompliantRequested);
     }
 

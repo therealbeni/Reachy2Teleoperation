@@ -32,6 +32,10 @@ namespace TeleopReachy
 
         // new navigation events
 
+        // Dance Events
+        OnStartDance,
+        OnStopDance,
+
 
         EnterMenuFromSafetyScene,
         ShowXRay,

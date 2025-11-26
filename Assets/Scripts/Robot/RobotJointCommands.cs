@@ -39,6 +39,9 @@ namespace TeleopReachy
             EventManager.StartListening(EventNames.OnStartArmTeleoperation, StartTeleoperation);
             EventManager.StartListening(EventNames.OnStopTeleoperation, StopTeleoperation);
 
+            EventManager.StartListening(EventNames.OnStartDance, StartDance);
+            EventManager.StartListening(EventNames.OnStopDance, StopDance);
+
             EventManager.StartListening(EventNames.OnSuspendTeleoperation, SuspendTeleoperation);
             EventManager.StartListening(EventNames.OnResumeTeleoperation, ResumeTeleoperation);
 
@@ -298,6 +301,32 @@ namespace TeleopReachy
         private void StopTeleoperation()
         {
             Debug.Log("[RobotJointCommands]: StopTeleoperation");
+            AskForCancellationCurrentMovementsPlaying();
+            if (waitToSetRobotFullSpeed != null)
+            {
+                StopCoroutine(waitToSetRobotFullSpeed);
+            }
+            if (waitToSetLeftArmFullSpeed != null)
+            {
+                StopCoroutine(waitToSetLeftArmFullSpeed);
+            }
+            if (waitToSetRightArmFullSpeed != null)
+            {
+                StopCoroutine(waitToSetRightArmFullSpeed);
+            }
+            if (!robotStatus.IsRobotPositionLocked) SetRobotSmoothlyCompliant();
+            ResetMotorsStartingSpeed();
+        }
+
+        private void StartDance()
+        {
+            Debug.Log("[RobotJointCommands]: Start Arm Dance");
+            waitToSetRobotFullSpeed = StartCoroutine(ResetReachyMotorsFullSpeed());
+        }
+
+        private void StopDance()
+        {
+            Debug.Log("[RobotJointCommands]: StopArmDance");
             AskForCancellationCurrentMovementsPlaying();
             if (waitToSetRobotFullSpeed != null)
             {

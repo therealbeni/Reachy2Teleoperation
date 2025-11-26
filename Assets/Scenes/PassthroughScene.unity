@@ -5250,6 +5250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 719493070}
   - component: {fileID: 719493073}
+  - component: {fileID: 719493074}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -5287,6 +5288,18 @@ MonoBehaviour:
   simulatedReachy: {fileID: 1078238893}
   realReachy: {fileID: 870630510}
   realRobotLabel: {fileID: 1345996166}
+--- !u!114 &719493074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719493069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056b46dda4bb7a64e94af79818ef0588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &736350066
 GameObject:
   m_ObjectHideFlags: 0
@@ -12287,7 +12300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recordingsFolderName: dance_recordings
-  recordingFileName: test.json
+  recordingFileName: correct_test.json
   loop: 0
   playbackSpeed: 1
   useHomePose: 1
