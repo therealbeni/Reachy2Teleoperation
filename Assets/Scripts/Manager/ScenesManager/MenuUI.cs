@@ -21,8 +21,9 @@ public class MenuUI : MonoBehaviour
     // NEW BUTTON:
     public void BackToConnection()
     {
-        EventManager.TriggerEvent(EventNames.EnterConnectionScene);
+        EventManager.TriggerEvent(EventNames.EnterConnectionFromMenuScene);
     }
+
 
     public void QuitApp()
     {

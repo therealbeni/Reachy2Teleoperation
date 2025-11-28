@@ -24,13 +24,20 @@ namespace TeleopReachy
 
         private MirrorSceneManager sceneManager;
 
+        private DanceSceneManager danceSceneManager;
+
         void Start()
         {
             needUpdateRobotDisplay = false;
             realRobotDisplayed = false;
 
             sceneManager = MirrorSceneManager.Instance;
-            sceneManager.event_OnTeleopInitializationStepChanged.AddListener(CheckStep);
+            danceSceneManager = DanceSceneManager.Instance;
+
+            if (sceneManager != null)
+                sceneManager.event_OnTeleopInitializationStepChanged.AddListener(CheckStep);
+            else if (danceSceneManager != null)
+                danceSceneManager.event_OnDanceInitializationStepChanged.AddListener(CheckStep);
 
             robotConfig = RobotDataManager.Instance.RobotConfig;
             robotConfig.event_OnConfigChanged.AddListener(ModifyRobotsDisplayed);

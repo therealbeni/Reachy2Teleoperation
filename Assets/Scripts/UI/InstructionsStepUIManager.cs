@@ -9,6 +9,8 @@ namespace TeleopReachy
     {
         private MirrorSceneManager sceneManager;
 
+        private DanceSceneManager danceSceneManager;
+
         [SerializeField]
         private InitializationState instructionsStep;
 
@@ -17,9 +19,14 @@ namespace TeleopReachy
         void Start()
         {
             sceneManager = MirrorSceneManager.Instance;
+            danceSceneManager = DanceSceneManager.Instance;
             needUpdateInstructions = false;
 
-            sceneManager.event_OnTeleopInitializationStepChanged.AddListener(CheckInstructions);
+            if (sceneManager != null)
+                sceneManager.event_OnTeleopInitializationStepChanged.AddListener(CheckInstructions);
+            else if (danceSceneManager != null)
+                danceSceneManager.event_OnDanceInitializationStepChanged.AddListener(CheckInstructions);
+
             CheckInstructions();
         }
 
@@ -33,7 +40,18 @@ namespace TeleopReachy
             if(needUpdateInstructions)
             {
                 needUpdateInstructions = false;
-                transform.ActivateChildren(sceneManager.initializationState == instructionsStep);
+
+                if (danceSceneManager != null)
+                {
+                    transform.ActivateChildren(danceSceneManager.initializationState == instructionsStep);
+                    return;
+                }
+                if (sceneManager != null)
+                {
+                    transform.ActivateChildren(sceneManager.initializationState == instructionsStep);
+                    return;
+                }
+                    
             }
         }
     }
