@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7a20ec0dffaf8ae4e97d649082c7290f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   requestEyeTrackingPermissionOnStartup: 0
   requestScenePermissionOnStartup: 0
   _localDimming: 1
-  _trackingOriginType: 0
+  _trackingOriginType: 1
   usePositionTracking: 1
   useRotationTracking: 1
   useIPDInPositionTracking: 1
@@ -1983,6 +1983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060dd2ec099141e47ac114e5d82be687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robotStatus: {fileID: 0}
+  jointsCommands: {fileID: 0}
   event_OnTriedToSendMobilityCommands:
     m_PersistentCalls:
       m_Calls: []
