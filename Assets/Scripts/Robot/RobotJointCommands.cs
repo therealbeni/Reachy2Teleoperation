@@ -39,7 +39,7 @@ namespace TeleopReachy
             EventManager.StartListening(EventNames.OnStartArmTeleoperation, StartTeleoperation);
             EventManager.StartListening(EventNames.OnStopTeleoperation, StopTeleoperation);
 
-            EventManager.StartListening(EventNames.OnStartDance, StartDance);
+            EventManager.StartListening(EventNames.OnStartDance, StartDanceSequence);
             EventManager.StartListening(EventNames.OnStopDance, StopDance);
 
             EventManager.StartListening(EventNames.OnSuspendTeleoperation, SuspendTeleoperation);
@@ -318,7 +318,7 @@ namespace TeleopReachy
             ResetMotorsStartingSpeed();
         }
 
-        private void StartDance()
+        private void StartDanceSequence()
         {
             Debug.Log("[RobotJointCommands]: Start Arm Dance");
             waitToSetRobotFullSpeed = StartCoroutine(ResetReachyMotorsFullSpeed());

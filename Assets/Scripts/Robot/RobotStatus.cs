@@ -42,7 +42,7 @@ namespace TeleopReachy
             EventManager.StartListening(EventNames.OnStartTeleoperation, StartRobotTeleoperation);
             EventManager.StartListening(EventNames.OnSuspendTeleoperation, SuspendRobotTeleoperation);
             EventManager.StartListening(EventNames.OnResumeTeleoperation, ResumeRobotTeleoperation);
-            EventManager.StartListening(EventNames.OnStartDance, StartDance);
+            EventManager.StartListening(EventNames.OnStartDance, StartDanceSequence);
         }
 
         public void StartDanceRoutine()
@@ -248,7 +248,7 @@ namespace TeleopReachy
             IsRobotPositionLocked = false;
         }
 
-        private void StartDance()
+        private void StartDanceSequence()
         {
             Debug.Log("[RobotStatus]: Start dance");
             areRobotMovementsSuspended = false;
