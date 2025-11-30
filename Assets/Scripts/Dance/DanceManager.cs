@@ -39,6 +39,9 @@ public class DanceManager : MonoBehaviour
     [Tooltip("If assigned, the simulated Reachy will also be driven by the recording.")]
     public DanceSimulationServer simulatedServer;
 
+    //getting grader to stop
+    public ReachyDanceGrader grader;
+
     private enum PlaybackPhase
     {
         Idle,
@@ -181,6 +184,7 @@ public class DanceManager : MonoBehaviour
         isPlaying = false;
         phase = PlaybackPhase.Idle;
 
+        grader.StopGrading();
         Debug.Log("DanceManager: Stopped playback.");
 
         EventManager.TriggerEvent(EventNames.OnStopDance);
