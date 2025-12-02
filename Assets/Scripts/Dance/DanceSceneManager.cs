@@ -59,6 +59,9 @@ namespace TeleopReachy
 
             controllers = ActiveControllerManager.Instance.ControllersManager;
 
+            // Reposition when origin is fixed (keeps X/Z, only adjusts Y + yaw)
+            EventManager.StartListening(EventNames.OnFixUserOrigin, MakeObjectsFaceUserOrigin);
+
             ResetPosition();
             if (Robot.IsCurrentRobotVirtual()) initializationState = InitializationState.NoInitializationRequired;
             else initializationState = InitializationState.WaitingForRobotReady;
@@ -105,29 +108,31 @@ namespace TeleopReachy
         {
             if (userOrigin == null) userOrigin = UserTrackerManager.Instance.transform;
 
+            // Compute target Y from the user origin; userOrigin is already placed relative to headset in UserTrackerManager
+            float targetY = userOrigin.position.y + objectsHeightOffset;
+
             if (jukebox != null)
             {
-                jukebox.position = userOrigin.TransformPoint(Vector3.forward * distanceToObjects);
-                jukebox.position = new Vector3(jukebox.position.x, jukebox.position.y + objectsHeightOffset, jukebox.position.z);
-                jukebox.rotation = userOrigin.localRotation;
+                // keep original X/Z, only adjust Y and yaw to face the user
+                Vector3 jukeboxPos = jukebox.position;
+                jukeboxPos.y = targetY;
+                jukebox.position = jukeboxPos;
+
+                // align yaw to user origin (keep only Y rotation)
+                jukebox.rotation = Quaternion.Euler(0f, userOrigin.eulerAngles.y, 0f);
             }
 
             if (speakers != null)
             {
-                // place speakers slightly to the sides of the jukebox
-                Vector3 rightOffset = userOrigin.TransformDirection(Vector3.right * 0.7f); // tweak as needed
-                Vector3 leftOffset = userOrigin.TransformDirection(Vector3.right * -0.7f);
+                // keep original X/Z, only adjust Y and yaw to face the user
+                Vector3 speakersPos = speakers.position;
+                speakersPos.y = targetY;
+                speakers.position = speakersPos;
 
-                // Primary speakers container centered in front of user, then children can be left/right
-                speakers.position = userOrigin.TransformPoint(Vector3.forward * (distanceToObjects - 0.1f));
-                speakers.position = new Vector3(speakers.position.x, speakers.position.y + objectsHeightOffset, speakers.position.z);
-                speakers.rotation = userOrigin.localRotation;
+                speakers.rotation = Quaternion.Euler(0f, userOrigin.eulerAngles.y, 0f);
 
-                // If speakers has two child transforms named "Left" and "Right" you can position them like this:
-                Transform left = speakers.Find("Left");
-                Transform right = speakers.Find("Right");
-                if (left != null) left.position = speakers.position + leftOffset;
-                if (right != null) right.position = speakers.position + rightOffset;
+                // do not change children X/Z positions — keep original layout
+                // If you want to nudge left/right children you can still access them here, but leave default behavior to preserve scene layout
             }
         }
 
