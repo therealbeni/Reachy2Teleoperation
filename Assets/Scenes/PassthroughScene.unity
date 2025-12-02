@@ -726,6 +726,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alwaysButton: {fileID: 1771309866}
   neverButton: {fileID: 455468672}
+--- !u!4 &69311253 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5808275177861247567, guid: 23e793a54aa60cc49820f341271d8af8, type: 3}
+  m_PrefabInstance: {fileID: 1176679367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &72812916
 GameObject:
   m_ObjectHideFlags: 0
@@ -5690,8 +5695,8 @@ MonoBehaviour:
       m_Calls: []
   jukebox: {fileID: 1241219576}
   speakers: {fileID: 2064380515}
-  distanceToObjects: 2
-  objectsHeightOffset: -0
+  reachy_viz: {fileID: 69311253}
+  objectsHeightOffset: -1.2
 --- !u!1 &736350066
 GameObject:
   m_ObjectHideFlags: 0
@@ -9921,13 +9926,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: DanceReachy2
       objectReference: {fileID: 0}
+    - target: {fileID: 3393275350718319556, guid: 23e793a54aa60cc49820f341271d8af8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5808275177861247567, guid: 23e793a54aa60cc49820f341271d8af8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.621
       objectReference: {fileID: 0}
     - target: {fileID: 5808275177861247567, guid: 23e793a54aa60cc49820f341271d8af8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5808275177861247567, guid: 23e793a54aa60cc49820f341271d8af8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10932,7 +10941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3453340161848835122, guid: bce4c99a308ddf540bdf867db0939c1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3453340161848835122, guid: bce4c99a308ddf540bdf867db0939c1e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14292,7 +14301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8897093224900880590, guid: 160fecfe0e94dbe478ebb2c9b8231797, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8897093224900880590, guid: 160fecfe0e94dbe478ebb2c9b8231797, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17330,7 +17339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8897093224900880590, guid: b5035dc44d38852409c7c3415ee6bbe0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8897093224900880590, guid: b5035dc44d38852409c7c3415ee6bbe0, type: 3}
       propertyPath: m_LocalPosition.z

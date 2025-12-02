@@ -43,10 +43,11 @@ namespace TeleopReachy
         [SerializeField]
         private Transform speakers;
 
-        [Header("Auto-placement")]
         [SerializeField]
-        private float distanceToObjects = 2.0f;
+        private Transform reachy_viz;
 
+        [Header("Auto-placement")]
+       
         [SerializeField]
         private float objectsHeightOffset = -0.0f;
 
@@ -119,7 +120,7 @@ namespace TeleopReachy
                 jukebox.position = jukeboxPos;
 
                 // align yaw to user origin (keep only Y rotation)
-                jukebox.rotation = Quaternion.Euler(0f, userOrigin.eulerAngles.y, 0f);
+                //jukebox.rotation = Quaternion.Euler(0f, userOrigin.eulerAngles.y, 0f);
             }
 
             if (speakers != null)
@@ -129,10 +130,19 @@ namespace TeleopReachy
                 speakersPos.y = targetY;
                 speakers.position = speakersPos;
 
-                speakers.rotation = Quaternion.Euler(0f, userOrigin.eulerAngles.y, 0f);
+                //speakers.rotation = Quaternion.Euler(0f, userOrigin.eulerAngles.y, 0f);
 
                 // do not change children X/Z positions — keep original layout
                 // If you want to nudge left/right children you can still access them here, but leave default behavior to preserve scene layout
+            }
+
+            if (reachy_viz != null)
+            {
+                // keep original X/Z, only adjust Y and yaw to face the user
+                Vector3 reachyVizPos = reachy_viz.position;
+                reachyVizPos.y = targetY;
+                reachy_viz.position = reachyVizPos;
+                //reachy_viz.rotation = Quaternion.Euler(0f, userOrigin.eulerAngles.y, 0f);
             }
         }
 
