@@ -36,6 +36,20 @@ namespace TeleopReachy
 
         public UnityEvent event_OnDanceInitializationStepChanged;
 
+        // Jukebox / speakers controls (added)
+        [SerializeField]
+        private Transform jukebox;
+
+        [SerializeField]
+        private Transform speakers;
+
+        [Header("Auto-placement")]
+        [SerializeField]
+        private float distanceToObjects = 2.0f;
+
+        [SerializeField]
+        private float objectsHeightOffset = -0.0f;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -79,6 +93,7 @@ namespace TeleopReachy
         public void ResetPosition()
         {
             FixUserOrigin();
+            MakeObjectsFaceUserOrigin(); // ensure jukebox & speakers placed/oriented after origin fix
         }
 
         void FixUserOrigin()
@@ -86,7 +101,35 @@ namespace TeleopReachy
             EventManager.TriggerEvent(EventNames.OnFixUserOrigin);
         }
 
+        private void MakeObjectsFaceUserOrigin()
+        {
+            if (userOrigin == null) userOrigin = UserTrackerManager.Instance.transform;
 
+            if (jukebox != null)
+            {
+                jukebox.position = userOrigin.TransformPoint(Vector3.forward * distanceToObjects);
+                jukebox.position = new Vector3(jukebox.position.x, jukebox.position.y + objectsHeightOffset, jukebox.position.z);
+                jukebox.rotation = userOrigin.localRotation;
+            }
+
+            if (speakers != null)
+            {
+                // place speakers slightly to the sides of the jukebox
+                Vector3 rightOffset = userOrigin.TransformDirection(Vector3.right * 0.7f); // tweak as needed
+                Vector3 leftOffset = userOrigin.TransformDirection(Vector3.right * -0.7f);
+
+                // Primary speakers container centered in front of user, then children can be left/right
+                speakers.position = userOrigin.TransformPoint(Vector3.forward * (distanceToObjects - 0.1f));
+                speakers.position = new Vector3(speakers.position.x, speakers.position.y + objectsHeightOffset, speakers.position.z);
+                speakers.rotation = userOrigin.localRotation;
+
+                // If speakers has two child transforms named "Left" and "Right" you can position them like this:
+                Transform left = speakers.Find("Left");
+                Transform right = speakers.Find("Right");
+                if (left != null) left.position = speakers.position + leftOffset;
+                if (right != null) right.position = speakers.position + rightOffset;
+            }
+        }
 
         // Update is called once per frame
         void Update()
