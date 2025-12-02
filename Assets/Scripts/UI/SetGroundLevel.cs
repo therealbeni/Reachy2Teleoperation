@@ -8,6 +8,7 @@ namespace TeleopReachy
         void Start()
         {
             EventManager.StartListening(EventNames.MirrorSceneLoaded, UpdateGroundLevel);
+            EventManager.StartListening(EventNames.OnFixUserOrigin, UpdateGroundLevel);
         }
 
         // Update is called once per frame

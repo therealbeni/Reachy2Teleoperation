@@ -55,6 +55,8 @@ namespace TeleopReachy
             robotStatus = RobotDataManager.Instance.RobotStatus;
             robotConfig = RobotDataManager.Instance.RobotConfig;
 
+            connectionStatus = ConnectionStatus.Instance;
+
             if (connectionStatus.IsRobotReady()) RobotReadyForDance();
 
         }

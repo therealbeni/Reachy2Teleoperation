@@ -351,6 +351,7 @@ namespace TeleopReachy
 
         private IEnumerator LoadTeleoperationRoom(string teleopSceneName)
         {
+            ground.SetActive(false);
             SceneManager.LoadScene(teleopSceneName, LoadSceneMode.Additive);
             yield return null;
             EventManager.TriggerEvent(EventNames.TeleoperationSceneLoaded);
