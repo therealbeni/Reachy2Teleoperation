@@ -9,7 +9,7 @@ public class MusicMenuManager : MonoBehaviour
 
     public bool IsMenuOpen { get; private set; }
 
-    private bool leftPrimaryButtonPrev;
+    private bool rightSecondaryButtonPrev;
     private bool canMenuOpen = true;
 
     private ControllersManager controllers;
@@ -27,22 +27,21 @@ public class MusicMenuManager : MonoBehaviour
 
     void Update()
     {
-        bool leftPrimaryPressed = false;
+        bool rightSecondaryPressed = false;
 
-        // Detect Y button like EmotionMenu
-        if (canMenuOpen &&
-            controllers.leftHandDevice.TryGetFeatureValue(CommonUsages.primaryButton, out leftPrimaryPressed))
+        controllers.rightHandDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out rightSecondaryPressed);
+
+        if (canMenuOpen && rightSecondaryPressed && !rightSecondaryButtonPrev)
         {
-            if (leftPrimaryPressed && !leftPrimaryButtonPrev)
-            {
-                if (!IsMenuOpen)
-                    ShowMenu();
-                else
-                    HideMenuImmediate();
-            }
-
-            leftPrimaryButtonPrev = leftPrimaryPressed;
+            if (!IsMenuOpen)
+                ShowMenu();
+            else
+                HideMenuImmediate();
         }
+
+        rightSecondaryButtonPrev = rightSecondaryPressed;
+
+        
     }
 
     public void ShowMenu()
