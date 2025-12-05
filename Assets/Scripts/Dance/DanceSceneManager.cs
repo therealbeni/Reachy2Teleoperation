@@ -172,6 +172,11 @@ namespace TeleopReachy
         {
             EventManager.TriggerEvent(EventNames.OnReinitializeLimitsRequested);
         }
+
+        public void BackToMenuScene()
+        {
+            EventManager.TriggerEvent(EventNames.EnterConnectionScene);
+        }
     }
 }
 

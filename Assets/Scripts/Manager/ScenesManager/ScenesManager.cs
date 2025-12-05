@@ -202,6 +202,7 @@ namespace TeleopReachy
             UnloadAllMirrorScenes();
             UnloadAllTeleopScenes();
             UnloadSceneIfLoaded(MENU_SCENE);
+            UnloadSceneIfLoaded(DANCE_AFTER_REACHY_SCENE);
 
             SetTrackingEnabled(false);
             SetPassthrough(true);
