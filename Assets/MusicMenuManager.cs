@@ -1,58 +1,87 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.XR;
 using TeleopReachy;
 
-public class MusicMenuManager : MonoBehaviour
+public class MusicMenuManager : Singleton<MusicMenuManager>
 {
-    public static MusicMenuManager Instance;
-
-    public bool IsMenuOpen { get; private set; }
-
-    private bool rightSecondaryButtonPrev;
-    private bool canMenuOpen = true;
-
     private ControllersManager controllers;
 
-    void Awake()
-    {
-        Instance = this;
-    }
+    private bool isMusicMenuOpen;
+    private bool canMenuOpen;
+
+    private bool leftYPreviouslyPressed;
+
+    private Coroutine menuHidingCoroutine;
+    private bool menuHidingRequested;
 
     void Start()
     {
         controllers = ActiveControllerManager.Instance.ControllersManager;
-        HideMenuImmediate();
+
+        HideImmediatelyMusicMenu();
+        canMenuOpen = true;
+        menuHidingRequested = false;
     }
 
     void Update()
     {
-        bool rightSecondaryPressed = false;
+        bool leftYPressed = false;
 
-        controllers.rightHandDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out rightSecondaryPressed);
-
-        if (canMenuOpen && rightSecondaryPressed && !rightSecondaryButtonPrev)
+        if (canMenuOpen)
         {
-            if (!IsMenuOpen)
-                ShowMenu();
-            else
-                HideMenuImmediate();
+            if (controllers.leftHandDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.secondaryButton, out leftYPressed)
+                && leftYPressed
+                && !leftYPreviouslyPressed)
+            {
+                if (!isMusicMenuOpen)
+                {
+                    ShowMusicMenu();
+                }
+                else
+                {
+                    HideImmediatelyMusicMenu();
+                }
+            }
+
+            leftYPreviouslyPressed = leftYPressed;
         }
 
-        rightSecondaryButtonPrev = rightSecondaryPressed;
-
-        
+        if (menuHidingRequested)
+        {
+            transform.ActivateChildren(false);
+            isMusicMenuOpen = false;
+            menuHidingRequested = false;
+        }
     }
 
-    public void ShowMenu()
+    public void HideAfterSeconds(float delay = 0.5f)
     {
-        transform.ActivateChildren(true); // same helper used in EmotionMenu
-        IsMenuOpen = true;
+        if (menuHidingCoroutine != null)
+            StopCoroutine(menuHidingCoroutine);
+
+        menuHidingCoroutine = StartCoroutine(HideMusicMenu(delay));
     }
 
-    public void HideMenuImmediate()
+    void ShowMusicMenu()
     {
+        transform.ActivateChildren(true);
+        isMusicMenuOpen = true;
+    }
+
+    IEnumerator HideMusicMenu(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        menuHidingRequested = true;
+    }
+
+    void HideImmediatelyMusicMenu()
+    {
+        if (menuHidingCoroutine != null)
+            StopCoroutine(menuHidingCoroutine);
+
         transform.ActivateChildren(false);
-        IsMenuOpen = false;
+        isMusicMenuOpen = false;
+        canMenuOpen = true;
     }
 }
