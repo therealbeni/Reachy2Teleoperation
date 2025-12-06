@@ -73,6 +73,9 @@ namespace TeleopReachy
             robotStatus = RobotDataManager.Instance.RobotStatus;
             robotConfig = RobotDataManager.Instance.RobotConfig;
 
+            if (MusicSystem.Instance != null)
+                MusicSystem.Instance.SetMute(true);
+
             connectionStatus = ConnectionStatus.Instance;
 
             if (connectionStatus.IsRobotReady()) RobotReadyForDance();
@@ -132,7 +135,7 @@ namespace TeleopReachy
 
                 //speakers.rotation = Quaternion.Euler(0f, userOrigin.eulerAngles.y, 0f);
 
-                // do not change children X/Z positions — keep original layout
+                // do not change children X/Z positions ï¿½ keep original layout
                 // If you want to nudge left/right children you can still access them here, but leave default behavior to preserve scene layout
             }
 
@@ -170,11 +173,17 @@ namespace TeleopReachy
 
         protected void BackToConnectionScene()
         {
+            if (MusicSystem.Instance != null)
+                MusicSystem.Instance.SetMute(false);
+
             EventManager.TriggerEvent(EventNames.OnReinitializeLimitsRequested);
         }
 
         public void BackToMenuScene()
         {
+            if (MusicSystem.Instance != null)
+                MusicSystem.Instance.SetMute(false);
+
             EventManager.TriggerEvent(EventNames.EnterConnectionScene);
         }
     }

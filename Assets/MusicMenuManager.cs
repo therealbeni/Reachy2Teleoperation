@@ -15,6 +15,9 @@ public class MusicMenuManager : Singleton<MusicMenuManager>
     private Coroutine menuHidingCoroutine;
     private bool menuHidingRequested;
 
+    private bool joystickRightPrev;
+    private bool joystickLeftPrev;
+
     void Start()
     {
         controllers = ActiveControllerManager.Instance.ControllersManager;
@@ -27,6 +30,8 @@ public class MusicMenuManager : Singleton<MusicMenuManager>
     void Update()
     {
         bool leftYPressed = false;
+
+        HandleJoystickTrackNavigation();
 
         if (canMenuOpen)
         {
@@ -53,6 +58,32 @@ public class MusicMenuManager : Singleton<MusicMenuManager>
             isMusicMenuOpen = false;
             menuHidingRequested = false;
         }
+    }
+
+    void HandleJoystickTrackNavigation()
+    {
+        if (!isMusicMenuOpen)
+            return;
+
+        Vector2 joystick;
+        controllers.leftHandDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out joystick);
+
+        // Skip RIGHT
+        if (joystick.x > 0.8f && !joystickRightPrev)
+        {
+            Debug.Log("MusicMenu: Next track");
+            MusicSystem.Instance.Next();
+        }
+
+        // Skip LEFT
+        if (joystick.x < -0.8f && !joystickLeftPrev)
+        {
+            Debug.Log("MusicMenu: Previous track");
+            MusicSystem.Instance.Previous();
+        }
+
+        joystickRightPrev = joystick.x > 0.8f;
+        joystickLeftPrev  = joystick.x < -0.8f;
     }
 
     public void HideAfterSeconds(float delay = 0.5f)
