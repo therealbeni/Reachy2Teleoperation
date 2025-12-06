@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5633a71ce64bff42aa11d707725e671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaneDistance: 1
+  PlaneDistance: 1.5
 --- !u!225 &325904310
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2139,7 +2139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5633a71ce64bff42aa11d707725e671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaneDistance: 0.9
+  PlaneDistance: 1.5
 --- !u!1 &565443465
 GameObject:
   m_ObjectHideFlags: 0
@@ -9934,7 +9934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5633a71ce64bff42aa11d707725e671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaneDistance: 0.7
+  PlaneDistance: 1.2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

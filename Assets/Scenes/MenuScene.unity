@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 80
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 1
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5633a71ce64bff42aa11d707725e671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaneDistance: 1
+  PlaneDistance: 2
 --- !u!225 &325904310
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2750,7 +2750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6fc301ff4938494395bb185c01a5bea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -918
+      value: -1172.7996
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6fc301ff4938494395bb185c01a5bea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2758,23 +2758,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6fc301ff4938494395bb185c01a5bea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -121
+      value: -82.55969
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6fc301ff4938494395bb185c01a5bea, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.34202018
+      value: 0.2653427
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6fc301ff4938494395bb185c01a5bea, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.000000009008609
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6fc301ff4938494395bb185c01a5bea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9396927
+      value: 0.9641542
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6fc301ff4938494395bb185c01a5bea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0000000032788658
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6fc301ff4938494395bb185c01a5bea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2782,7 +2782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6fc301ff4938494395bb185c01a5bea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 140
+      value: 149.225
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6fc301ff4938494395bb185c01a5bea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5003,7 +5003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5633a71ce64bff42aa11d707725e671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaneDistance: 0.7
+  PlaneDistance: 1.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

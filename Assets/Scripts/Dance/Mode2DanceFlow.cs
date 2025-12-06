@@ -159,6 +159,7 @@ public class DanceFlowController : MonoBehaviour
         yield return new WaitForSeconds(demoPreCountdownDelay);
 
         // PHASE 2: 3-2-1-GO (demo)
+        DeactivateAllCountdowns();
         yield return CountdownRoutine();
         SafeSetActive(watchDanceText, false);
 
@@ -179,6 +180,7 @@ public class DanceFlowController : MonoBehaviour
         // PHASE 5: "Now together" + restart same track, 2s pre-countdown
         SafeSetActive(nowTogetherText, true);
 
+
         if (songSelector != null)
         {
             songSelector.PlayCurrentSong();
@@ -186,6 +188,7 @@ public class DanceFlowController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(togetherPreCountdownDelay);
+        DeactivateAllCountdowns();
         yield return CountdownRoutine();
 
         // PHASE 6: start same dance again + grading
@@ -240,16 +243,20 @@ public class DanceFlowController : MonoBehaviour
         SetOnlyCountdownVisible(countdown3Text);
         yield return new WaitForSeconds(countdownStepDuration);
 
+        DeactivateAllCountdowns();
         SetOnlyCountdownVisible(countdown2Text);
         yield return new WaitForSeconds(countdownStepDuration);
 
+        DeactivateAllCountdowns();
         SetOnlyCountdownVisible(countdown1Text);
         yield return new WaitForSeconds(countdownStepDuration);
 
+        DeactivateAllCountdowns();
         SetOnlyCountdownVisible(countdownGoText);
         yield return new WaitForSeconds(countdownStepDuration);
 
         SetOnlyCountdownVisible(null);
+        DeactivateAllCountdowns();
     }
 
     private void SetOnlyCountdownVisible(TMP_Text active)
@@ -258,6 +265,16 @@ public class DanceFlowController : MonoBehaviour
         SafeSetActive(countdown2Text, active == countdown2Text);
         SafeSetActive(countdown1Text, active == countdown1Text);
         SafeSetActive(countdownGoText, active == countdownGoText);
+    }
+
+    private void DeactivateAllCountdowns()
+    {
+        SafeSetActive(watchDanceText, false);
+        SafeSetActive(nowTogetherText, false);
+        SafeSetActive(countdown3Text, false);
+        SafeSetActive(countdown2Text, false);
+        SafeSetActive(countdown1Text, false);
+        SafeSetActive(countdownGoText, false);
     }
 
     private void SafeSetActive(TMP_Text text, bool active)
