@@ -1,13 +1,19 @@
 using UnityEngine;
 
+public enum MusicMode { Background, Dance }
+
 public class MusicSystem : MonoBehaviour
 {
     public static MusicSystem Instance;
 
-    public AudioClip[] tracks;
+    [Header("Music Tracks")]
+    public AudioClip backgroundTrack;     // Old tracks[0]
+    public AudioClip[] danceTracks;       // Old tracks[1..n]
 
     private AudioSource audioSource;
-    private int currentIndex;
+    private int currentDanceIndex = 0;
+
+    public MusicMode Mode { get; private set; } = MusicMode.Background;
 
     void Awake()
     {
@@ -21,54 +27,89 @@ public class MusicSystem : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         audioSource = GetComponent<AudioSource>();
-
-        audioSource.loop = true;        // << always loop the track
+        audioSource.loop = true;
         audioSource.playOnAwake = false;
     }
 
     void Start()
     {
-        // Play first track automatically
-        if (tracks != null && tracks.Length > 0)
-        {
-            PlayIndex(0);
-        }
+        PlayBackground();
     }
 
-    public int CurrentIndex => currentIndex;
+    //--------------------------------------
+    // Background mode
+    //--------------------------------------
 
-    public void PlayIndex(int index)
+    public void PlayBackground()
     {
-        if (index < 0 || index >= tracks.Length)
+        if (Mode == MusicMode.Background && audioSource.clip == backgroundTrack && audioSource.isPlaying)
+        {
             return;
+        }
 
-        currentIndex = index;
+        Mode = MusicMode.Background;
 
-        audioSource.clip = tracks[currentIndex];
+        if (backgroundTrack == null)
+        {
+            Debug.LogWarning("No background track assigned.");
+            return;
+        }
+
+        audioSource.clip = backgroundTrack;
+        audioSource.loop = true;
         audioSource.Play();
     }
 
-    public void Next()
-    {
-        if (tracks.Length == 0)
-            return;
 
-        int next = (currentIndex + 1) % tracks.Length;
-        PlayIndex(next);
+    //--------------------------------------
+    // Dance mode
+    //--------------------------------------
+
+    public void StartDance()
+    {
+        if (danceTracks.Length == 0)
+        {
+            Debug.LogWarning("No dance tracks assigned.");
+            return;
+        }
+
+        Mode = MusicMode.Dance;
+        audioSource.loop = false;
+
+        currentDanceIndex = 0;
+        audioSource.clip = danceTracks[currentDanceIndex];
+        audioSource.Play();
     }
 
-    public void Previous()
+    public void StopDance()
     {
-        if (tracks.Length == 0)
-            return;
-
-        int prev = (currentIndex - 1 + tracks.Length) % tracks.Length;
-        PlayIndex(prev);
+        PlayBackground();
     }
+
+    public void NextDance()
+    {
+        if (Mode != MusicMode.Dance) return;
+
+        currentDanceIndex = (currentDanceIndex + 1) % danceTracks.Length;
+        audioSource.clip = danceTracks[currentDanceIndex];
+        audioSource.Play();
+    }
+
+    public void PreviousDance()
+    {
+        if (Mode != MusicMode.Dance) return;
+
+        currentDanceIndex = (currentDanceIndex - 1 + danceTracks.Length) % danceTracks.Length;
+        audioSource.clip = danceTracks[currentDanceIndex];
+        audioSource.Play();
+    }
+
+    //--------------------------------------
+    // Mute functionality (unchanged)
+    //--------------------------------------
 
     public void ToggleMute()
     {
-        Debug.Log("Mute button pressed!");
         audioSource.mute = !audioSource.mute;
     }
 
@@ -77,6 +118,10 @@ public class MusicSystem : MonoBehaviour
         audioSource.mute = mute;
     }
 
-    public bool IsMuted => audioSource.mute;
+    public int GetCurrentDanceIndex()
+    {
+        return currentDanceIndex;
+    }
 
+    public bool IsMuted => audioSource.mute;
 }

@@ -5,12 +5,12 @@ public class JukeboxController : MonoBehaviour
     public void PlayNextTrack()
     {
         // Skip to next song
-        MusicSystem.Instance.Next();
+        MusicSystem.Instance.NextDance();
 
         // Update UI highlight if menu is open
         if (MusicMenuUIManager.Instance != null)
         {
-            MusicMenuUIManager.Instance.HighlightTrack(MusicSystem.Instance.CurrentIndex);
+            MusicMenuUIManager.Instance.HighlightTrack(MusicSystem.Instance.GetCurrentDanceIndex());
         }
     }
 }

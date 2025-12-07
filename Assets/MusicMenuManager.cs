@@ -72,14 +72,14 @@ public class MusicMenuManager : Singleton<MusicMenuManager>
         if (joystick.x > 0.8f && !joystickRightPrev)
         {
             Debug.Log("MusicMenu: Next track");
-            MusicSystem.Instance.Next();
+            MusicSystem.Instance.NextDance();
         }
 
         // Skip LEFT
         if (joystick.x < -0.8f && !joystickLeftPrev)
         {
             Debug.Log("MusicMenu: Previous track");
-            MusicSystem.Instance.Previous();
+            MusicSystem.Instance.PreviousDance();
         }
 
         joystickRightPrev = joystick.x > 0.8f;

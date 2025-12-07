@@ -1935,9 +1935,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00320986d0b966a458b5585de41cdc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tracks:
+  backgroundTrack: {fileID: 8300000, guid: 6420efb05c3ba9d42ba36b91a1c9e34f, type: 3}
+  danceTracks:
   - {fileID: 8300000, guid: 8eb55774b917a33439ed753a68628487, type: 3}
-  - {fileID: 8300000, guid: 6420efb05c3ba9d42ba36b91a1c9e34f, type: 3}
   - {fileID: 8300000, guid: 54a0ecf2c68af3944a67d288fbdbae6b, type: 3}
   - {fileID: 8300000, guid: bae18368491fc894daee67abd9b3e4ad, type: 3}
 --- !u!82 &1483033963

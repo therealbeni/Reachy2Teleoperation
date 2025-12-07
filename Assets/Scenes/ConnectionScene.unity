@@ -3808,6 +3808,7 @@ GameObject:
   - component: {fileID: 1025611271}
   - component: {fileID: 1025611270}
   - component: {fileID: 1025611272}
+  - component: {fileID: 1025611273}
   m_Layer: 0
   m_Name: ConnectionManager
   m_TagString: Untagged
@@ -3859,6 +3860,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5646968878018044a8eca33c9fab36bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1025611273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025611269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce70219c69a4034eb155fe9c0070767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useDanceMusic: 0
 --- !u!1 &1027963365
 GameObject:
   m_ObjectHideFlags: 0
