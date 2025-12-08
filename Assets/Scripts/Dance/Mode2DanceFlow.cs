@@ -106,11 +106,27 @@ public class DanceFlowController : MonoBehaviour
 
         DontAllowMenuUnhide = true;
 
+        if (songSelector != null)
+            songSelector.StopPreview();
+
         if (DanceUIPanel != null)
             DanceUIPanel.SetActive(false);  // hides the whole dance UI (including Start button)
 
         // Just in case there is an old grading popup.
         HideGradingResultPanel();
+
+        if (songSelector != null && danceManager != null)
+        {
+            string recFile = songSelector.GetCurrentRecordingFileName();
+            if (!string.IsNullOrEmpty(recFile))
+            {
+                danceManager.SetRecordingFile(recFile);
+            }
+            else
+            {
+                Debug.LogWarning("DanceFlowController: No recording file name for current song.");
+            }
+        }
 
         sequenceCoroutine = StartCoroutine(DanceFlowSequence());
     }
@@ -124,6 +140,11 @@ public class DanceFlowController : MonoBehaviour
 
         if (DanceUIPanel != null)
             DanceUIPanel.SetActive(true);
+
+        if (songSelector != null)
+        {
+            songSelector.StopPreview();
+        }
 
         DontAllowMenuUnhide = false;
     }

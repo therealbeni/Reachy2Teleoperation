@@ -12,7 +12,7 @@ using Reachy.Part;   // used indirectly by DanceSerializer
 public class DanceManager : MonoBehaviour
 {
     [Header("Recording")]
-    [Tooltip("Folder (relative to Application.dataPath) where dance JSON files are saved. Must match DanceRecorder.")]
+    [Tooltip("Folder (relative to Application.streamingAssetsPath) where dance JSON files are saved. Must match DanceRecorder.")]
     public string recordingsFolderName = "dance_recordings";
 
     [Tooltip("Name of the recording file, e.g. 'dance_20251125_163343.json'.")]
@@ -25,16 +25,6 @@ public class DanceManager : MonoBehaviour
     [Tooltip("Speed multiplier (1 = real time)")]
     public float playbackSpeed = 1.0f;
 
-    [Header("Home pose / safety")]
-    [Tooltip("Use the first recorded pose as a 'home' pose at the beginning and end.")]
-    public bool useHomePose = true;
-
-    [Tooltip("How long to hold the home pose at the beginning (seconds).")]
-    public float homePoseHoldAtStart = 1.0f;
-
-    [Tooltip("How long to hold the home pose at the end (seconds).")]
-    public float homePoseHoldAtEnd = 1.0f;
-
     [Header("Simulation (optional)")]
     [Tooltip("If assigned, the simulated Reachy will also be driven by the recording.")]
     public DanceSimulationServer simulatedServer;
@@ -42,21 +32,9 @@ public class DanceManager : MonoBehaviour
     //getting grader to stop
     public ReachyDanceGrader grader;
 
-    private enum PlaybackPhase
-    {
-        Idle,
-        HomeStart,
-        Playing,
-        HomeEnd
-    }
-
-    private PlaybackPhase phase = PlaybackPhase.Idle;
-
     // Recording + samples (DTO)
     private DanceSerializer.DanceRecordingData recording;
-    private DanceSerializer.PoseSampleData homePose;
 
-    private float phaseStartTime;
     private float playbackStartTime;
     private int currentSampleIndex;
     private bool isPlaying;
@@ -71,8 +49,6 @@ public class DanceManager : MonoBehaviour
         InitRobotRefs();
         LoadRecording();
     }
-
-    // Removed automatic playback from Start()
 
     private void InitRobotRefs()
     {
@@ -95,7 +71,24 @@ public class DanceManager : MonoBehaviour
         }
     }
 
-    private bool LoadRecording()
+    public void SetRecordingFile(string newFileName)
+    {
+        if (string.IsNullOrEmpty(newFileName))
+        {
+            Debug.LogError("DanceManager: newFileName is null or empty.");
+            return;
+        }
+
+        recordingFileName = newFileName;
+
+        // Reload the recording from disk
+        if (!LoadRecording())
+        {
+            Debug.LogError($"DanceManager: failed to load recording '{newFileName}'.");
+        }
+    }
+
+    public bool LoadRecording()
     {
         if (string.IsNullOrEmpty(recordingFileName))
         {
@@ -122,7 +115,6 @@ public class DanceManager : MonoBehaviour
                 return false;
             }
 
-            homePose = recording.samples[0]; // first sample = home pose
             Debug.Log($"DanceManager: Loaded recording: {filePath} ({recording.samples.Count} samples)");
             return true;
         }
@@ -157,17 +149,7 @@ public class DanceManager : MonoBehaviour
 
         currentSampleIndex = 0;
         isPlaying = true;
-
-        if (useHomePose && homePose != null)
-        {
-            phase = PlaybackPhase.HomeStart;
-            phaseStartTime = Time.time;
-        }
-        else
-        {
-            phase = PlaybackPhase.Playing;
-            playbackStartTime = Time.time;
-        }
+        playbackStartTime = Time.time;
 
         // Robot stiffen / control takeover
         EventManager.TriggerEvent(EventNames.OnRobotStiffRequested);
@@ -182,13 +164,14 @@ public class DanceManager : MonoBehaviour
             return;
 
         isPlaying = false;
-        phase = PlaybackPhase.Idle;
 
-        grader.StopGrading();
+        if (grader != null)
+            grader.StopGrading();
+
         Debug.Log("DanceManager: Stopped playback.");
 
         EventManager.TriggerEvent(EventNames.OnStopDance);
-        EventManager.TriggerEvent(EventNames.OnRobotSmoothlyCompliantRequested);
+        EventManager.TriggerEvent(EventNames.OnRobotCompliantRequested);
     }
 
     private void Update()
@@ -199,42 +182,15 @@ public class DanceManager : MonoBehaviour
         if (robotStatus != null && robotStatus.AreRobotMovementsSuspended())
             return;
 
-        switch (phase)
-        {
-            case PlaybackPhase.HomeStart:
-                PlayHomeStartPhase();
-                break;
-
-            case PlaybackPhase.Playing:
-                PlayMainPhase();
-                break;
-
-            case PlaybackPhase.HomeEnd:
-                PlayHomeEndPhase();
-                break;
-
-            default:
-                break;
-        }
-    }
-
-    private void PlayHomeStartPhase()
-    {
-        SendPose(homePose);
-
-        float elapsed = Time.time - phaseStartTime;
-        if (elapsed >= homePoseHoldAtStart)
-        {
-            phase = PlaybackPhase.Playing;
-            playbackStartTime = Time.time;
-            currentSampleIndex = 0;
-        }
+        PlayMainPhase();
     }
 
     private void PlayMainPhase()
     {
+        // Time since playback started, scaled by playbackSpeed
         float t = (Time.time - playbackStartTime) * Mathf.Max(playbackSpeed, 0.0001f);
 
+        // Send all samples whose timestamps are <= t
         while (currentSampleIndex < recording.samples.Count &&
                recording.samples[currentSampleIndex].timestamp <= t)
         {
@@ -242,36 +198,14 @@ public class DanceManager : MonoBehaviour
             currentSampleIndex++;
         }
 
+        // If we reached the end of the recording
         if (currentSampleIndex >= recording.samples.Count)
-        {
-            if (useHomePose && homePose != null)
-            {
-                phase = PlaybackPhase.HomeEnd;
-                phaseStartTime = Time.time;
-            }
-            else if (loop)
-            {
-                playbackStartTime = Time.time;
-                currentSampleIndex = 0;
-            }
-            else
-            {
-                StopPlayback();
-            }
-        }
-    }
-
-    private void PlayHomeEndPhase()
-    {
-        SendPose(homePose);
-
-        float elapsed = Time.time - phaseStartTime;
-        if (elapsed >= homePoseHoldAtEnd)
         {
             if (loop)
             {
-                phase = PlaybackPhase.HomeStart;
-                phaseStartTime = Time.time;
+                // restart from beginning
+                playbackStartTime = Time.time;
+                currentSampleIndex = 0;
             }
             else
             {

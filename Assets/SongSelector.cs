@@ -11,19 +11,39 @@ public class SongSelector : MonoBehaviour
     public List<string> songs = new List<string>();
 
     [Header("Audio")]
-    [Tooltip("AudioSource that will play the selected dance track.")]
+    [Tooltip("AudioSource that will play the selected dance track (also used for preview).")]
     public AudioSource danceAudioSource;
 
     [Tooltip("Audio clips in the SAME order as 'songs'.")]
     public List<AudioClip> songClips = new List<AudioClip>();
 
+    [Tooltip("Json motion recordings in the SAME order as 'songs'")]
+    public List<string> recordingFileNames = new List<string>();
+
     int currentIndex = 0;
+
+    void Awake()
+    {
+        if (danceAudioSource == null)
+            danceAudioSource = FindObjectOfType<AudioSource>();
+    }
 
     void Start()
     {
         if (songs.Count > 0)
+        {
             UpdateLabel();
+            PlayPreview();   // start preview of the first song
+        }
     }
+
+    public string GetCurrentRecordingFileName()
+    {
+        if (recordingFileNames == null || recordingFileNames.Count == 0) return null;
+        int idx = Mathf.Clamp(currentIndex, 0, recordingFileNames.Count - 1);
+        return recordingFileNames[idx];
+    }
+
 
     public void NextSong()
     {
@@ -31,6 +51,7 @@ public class SongSelector : MonoBehaviour
 
         currentIndex = (currentIndex + 1) % songs.Count;  // wrap around
         UpdateLabel();
+        PlayPreview();   // update preview to new song
     }
 
     public void PreviousSong()
@@ -39,6 +60,7 @@ public class SongSelector : MonoBehaviour
 
         currentIndex = (currentIndex - 1 + songs.Count) % songs.Count; // wrap around
         UpdateLabel();
+        PlayPreview();   // update preview to new song
     }
 
     void UpdateLabel()
@@ -62,6 +84,30 @@ public class SongSelector : MonoBehaviour
         return songClips[idx];
     }
 
+    // ---------- PREVIEW (same AudioSource) ----------
+
+    public void PlayPreview()
+    {
+        if (danceAudioSource == null) return;
+
+        AudioClip clip = GetCurrentSongClip();
+        if (clip == null) return;
+
+        danceAudioSource.Stop();
+        danceAudioSource.clip = clip;
+        danceAudioSource.loop = true;  // preview loops in menu
+        danceAudioSource.time = 0f;
+        danceAudioSource.Play();
+    }
+
+    public void StopPreview()
+    {
+        if (danceAudioSource != null && danceAudioSource.isPlaying)
+            danceAudioSource.Stop();
+    }
+
+    // ---------- DANCE PLAYBACK (called from DanceFlowController) ----------
+
     public void PlayCurrentSong()
     {
         if (danceAudioSource == null)
@@ -77,12 +123,14 @@ public class SongSelector : MonoBehaviour
             return;
         }
 
+        // make sure preview is not looping anymore
+        StopPreview();
+
         // TODO: Switch OFF background music here before starting dance music.
-        // Example (pseudo-code):
-        //   backgroundMusicSource.Stop();
 
         danceAudioSource.clip = clip;
-        danceAudioSource.loop = false;   // One shot; we control when to replay
+        danceAudioSource.loop = false;   // one shot; DanceFlowController decides when to replay
+        danceAudioSource.time = 0f;      // always from start for demo & together phases
         danceAudioSource.Play();
     }
 
