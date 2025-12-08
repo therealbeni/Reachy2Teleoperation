@@ -235,6 +235,8 @@ namespace TeleopReachy
 
         private void LoadSafetyTabletopEndUnloadMenu()
         {
+            SetPassthrough(true);
+            skybox.SetActive(false);
             UnloadSceneIfLoaded(MENU_SCENE);
             LoadSafetyScene(SAFETY_TABLETOP);
         }
