@@ -546,8 +546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7986105276a0f4b97212fe9342043a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEntries: 5
   fileName: dance_highscores.json
+  maxEntries: 5
 --- !u!4 &228847462
 Transform:
   m_ObjectHideFlags: 0

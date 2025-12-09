@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 325904305}
   - component: {fileID: 325904304}
   - component: {fileID: 325904308}
-  - component: {fileID: 325904309}
+  - component: {fileID: 325904311}
   - component: {fileID: 325904310}
   m_Layer: 5
   m_Name: CanvaConnection
@@ -327,21 +327,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &325904309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325904303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5633a71ce64bff42aa11d707725e671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceFromCamera: 2
-  placeOnceInFrontOfCamera: 1
-  eventCamera: {fileID: 0}
 --- !u!225 &325904310
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -354,6 +339,21 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &325904311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325904303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0d7b4d56193fe4ca46b35efca62341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceFromCamera: 1.2
+  placeOnceInFrontOfCamera: 1
+  eventCamera: {fileID: 0}
 --- !u!1 &472632981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,10 +2907,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8003045104870536336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5633a71ce64bff42aa11d707725e671, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c0d7b4d56193fe4ca46b35efca62341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceFromCamera: 2
+  distanceFromCamera: 1.18
   placeOnceInFrontOfCamera: 1
   eventCamera: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
