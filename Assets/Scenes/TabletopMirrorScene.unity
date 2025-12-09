@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 0.654902}
+  m_Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 0.93333334}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4466,9 +4466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5633a71ce64bff42aa11d707725e671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceFromCamera: 2
-  placeOnceInFrontOfCamera: 1
-  eventCamera: {fileID: 0}
+  PlaneDistance: 0
 --- !u!114 &506325948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10598,9 +10596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5633a71ce64bff42aa11d707725e671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceFromCamera: 2
-  placeOnceInFrontOfCamera: 1
-  eventCamera: {fileID: 0}
+  PlaneDistance: 0
 --- !u!114 &1223158829
 MonoBehaviour:
   m_ObjectHideFlags: 0
