@@ -17,6 +17,7 @@ public class ImageSelector : MonoBehaviour
     {
         if (imageOptions.Count > 0)
             UpdatePreview();
+            ConfirmSelection();
     }
 
     public void NextImage()
