@@ -1194,6 +1194,9 @@ MonoBehaviour:
   clips:
   - {fileID: 32900000, guid: 3b77c9bccf4f53d4398920ccdb6473d6, type: 3}
   - {fileID: 32900000, guid: bad432e7e4718a6418222dd29a5e33c9, type: 3}
+  - {fileID: 32900000, guid: ece5fd1e53cef4b498aba4826c058cdf, type: 3}
+  - {fileID: 32900000, guid: af1cede67e4ed4d94964cb969d13e8e3, type: 3}
+  - {fileID: 32900000, guid: eff920ea5a52f45d1b68c903223195c5, type: 3}
 --- !u!4 &1423770410
 Transform:
   m_ObjectHideFlags: 0

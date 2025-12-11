@@ -56,6 +56,7 @@ public class MusicSystem : MonoBehaviour
         }
 
         audioSource.clip = backgroundTrack;
+        audioSource.volume = 0.5f;
         audioSource.loop = true;
         audioSource.Play();
     }
@@ -77,6 +78,7 @@ public class MusicSystem : MonoBehaviour
         audioSource.loop = false;
 
         currentDanceIndex = 0;
+        audioSource.volume = 1.0f;
         audioSource.clip = danceTracks[currentDanceIndex];
         audioSource.Play();
     }
@@ -89,7 +91,7 @@ public class MusicSystem : MonoBehaviour
     public void NextDance()
     {
         if (Mode != MusicMode.Dance) return;
-
+        audioSource.volume = 1.0f;
         currentDanceIndex = (currentDanceIndex + 1) % danceTracks.Length;
         audioSource.clip = danceTracks[currentDanceIndex];
         audioSource.Play();
@@ -98,7 +100,7 @@ public class MusicSystem : MonoBehaviour
     public void PreviousDance()
     {
         if (Mode != MusicMode.Dance) return;
-
+        audioSource.volume = 1.0f;
         currentDanceIndex = (currentDanceIndex - 1 + danceTracks.Length) % danceTracks.Length;
         audioSource.clip = danceTracks[currentDanceIndex];
         audioSource.Play();
