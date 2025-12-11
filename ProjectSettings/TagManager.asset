@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Button
   - robot
+  - RobotButton
+  - DeleteRobotButton
+  - ModifyRobotButton
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - UserAdvice
   - Head
   - NotVisible
-  - 
+  - floor
   - 
   - 
   - 
