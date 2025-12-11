@@ -2250,6 +2250,7 @@ MonoBehaviour:
   ground: {fileID: 6389971055515736630}
   XROrigin: {fileID: 595309022}
   skybox: {fileID: 1197276584}
+  emojiMenu: {fileID: 563896938}
 --- !u!114 &1794126930
 MonoBehaviour:
   m_ObjectHideFlags: 0

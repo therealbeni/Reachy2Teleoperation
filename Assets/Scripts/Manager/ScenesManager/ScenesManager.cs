@@ -12,6 +12,7 @@ namespace TeleopReachy
         public GameObject ground = null;
         public GameObject XROrigin = null;
         public GameObject skybox = null;
+        public GameObject emojiMenu = null;
 
         private PassthroughController passthrough;
 
@@ -125,6 +126,14 @@ namespace TeleopReachy
                 passthrough.SetPassthrough(enabled);
                 skybox.SetActive(!enabled);
                 ground.SetActive(!enabled);
+            }
+        }
+
+        private void SetEmojiMenu(bool enabled)
+        {
+            if (emojiMenu != null)
+            {
+                emojiMenu.SetActive(enabled);
             }
         }
 
@@ -272,7 +281,7 @@ namespace TeleopReachy
             ground.SetActive(false);
             SetTrackingEnabled(true);
             SetPassthrough(true);
-
+            SetEmojiMenu(false);
             StartCoroutine(LoadRobotDataSceneAndMirrorScene(DANCE_AFTER_REACHY_SCENE));
         }
 
@@ -282,6 +291,7 @@ namespace TeleopReachy
             UnloadSceneIfLoaded(SAFETY_TABLETOP);
             SetTrackingEnabled(true); // entering VR
             SetPassthrough(false);
+            SetEmojiMenu(false);
             StartCoroutine(LoadRobotDataSceneAndMirrorScene(MIRROR_TABLETOP));
         }
 
@@ -291,6 +301,7 @@ namespace TeleopReachy
             UnloadSceneIfLoaded(SAFETY_DANCE_TELEOP);
             SetTrackingEnabled(true); // entering VR
             SetPassthrough(false);
+            SetEmojiMenu(true);
             StartCoroutine(LoadRobotDataSceneAndMirrorScene(MIRROR_DANCE));
         }
 
@@ -345,6 +356,7 @@ namespace TeleopReachy
                 teleopSceneName = TELEOP_DANCE;
 
             SetPassthrough(false);
+            SetEmojiMenu(true);
 
             StartCoroutine(LoadTeleoperationRoom(teleopSceneName));
 
