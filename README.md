@@ -142,6 +142,5 @@ This project is intended for research, education, and demonstration purposes onl
 It is not designed for autonomous operation or unsupervised use.
 
 - Collision detection and avoidance are not implemented
-- Teleoperation modes should only be used in
 
 
