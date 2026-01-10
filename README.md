@@ -1,100 +1,107 @@
-# Reachy2Teleoperation
+# Dance Reachy! 🕺🤖
 
-Unity-based application that allows to control a Reachy 2 robot with a VR headset. The user documentation is available [here](https://pollen-robotics.github.io/reachy2-docs/teleoperation/).
+**Dance Reachy!** is a mixed reality teleoperation and interaction system for the **Reachy 2 humanoid robot**, developed as a semester project.  
+The project extends the official Reachy 2 teleoperation stack with expressive, game-inspired interaction modes designed for public demonstrations and exploratory human–robot interaction.
 
-## Requirements
+Using a VR/MR headset and Unity, users can:
+- Teleoperate Reachy expressively through full-body movement
+- Imitate prerecorded robot dance routines with real-time scoring
+- Perform goal-oriented tabletop manipulation tasks
 
-The app should run with any VR headset compatible with Unity. It has been tested with the Oculus Quest 2 and 3. The Oculus Quest headsets need the Oculus link for the app to work properly.
+The system focuses on **engagement, expressiveness, and usability**, rather than industrial precision or autonomous control.
 
-For any custom development, we recommend to use Unity LTS 2022.3, which has been used for development.
+---
 
-The project relies on GStreamer. It will be installed directly with the app if you use the installer (see below). Otherwise, please install the [Windows Runtime](
-https://gstreamer.freedesktop.org/data/pkg/windows/1.24.11/msvc/gstreamer-1.0-msvc-x86_64-1.24.11.msi) (make sure you select the **complete** installation), and the [development files](https://gstreamer.freedesktop.org/data/pkg/windows/1.24.11/msvc/gstreamer-1.0-devel-msvc-x86_64-1.24.11.msi). 
+## Project Overview
 
-<details>
-<summary>Check that the environment variable PATH contains <i>C:\gstreamer\1.0\msvc_x86_64\bin</i> (default installation). </summary>
+This project builds on the official Reachy 2 teleoperation pipeline and introduces:
 
-For that, look for “Edit the system environment variables” in the Windows search bar. Then, click on Environment variables. A new window shows up : double click on "Path" in the user variables. If you don't see the gstreamer variable, select "New" and add the pathway above. 
-<img src="Docs/img/env_variables.jpg" alt="setting env variables"/>
+- A **Unity-based mixed reality frontend** running on VR/MR headsets
+- **Three interaction modes**:
+  1. **Dance as Reachy** – expressive real-time teleoperation  
+  2. **Dance after Reachy** – dance imitation with scoring and feedback  
+  3. **Tabletop Game** – goal-oriented teleoperation task
+- A **motion playback and scoring pipeline** for prerecorded robot motions
+- Significant **refactoring and stabilization** of the original teleoperation backend to support multiple modes safely and predictably
 
-</details>
+The system was evaluated during a **live public demonstration** and through post-demo user questionnaires.
 
-Reboot after the installation. 
+---
+
+## Hardware and Software Requirements
+
+### Hardware
+- Reachy 2 humanoid robot
+- VR/MR headset compatible with Unity XR  
+  *(Tested with Meta Quest 2 and Meta Quest 3)*
+- Windows PC capable of running Unity and VR streaming
+
+### Software
+- **Unity LTS 2022.3** (recommended)
+- Oculus Link (for Meta Quest headsets)
+- GStreamer (required for robot communication)
+
+---
 
 ## Installation
 
-### Using a [release build](https://github.com/pollen-robotics/Reachy2Teleoperation/releases) [recommended]
+### 1. Clone the Repository
 
-For Windows platform, the simplest way to use the application is to download a [release here](https://github.com/pollen-robotics/ReachyTeleoperation/releases) (*Assets* section). You can use the installer to install the application on your computer, as well as GStreamer, or download the zip file that contains the .exe to run. Your VR headset should be plugged in and ready to be used.
-
-
-### From source
-
-Clone the **master** branch of the repo. Make sure that Git LFS is enabled. If you want to contribue to the project please see the *Issues/Contribution* section.
+```bash
+git clone --recurse-submodules https://github.com/YOUR_ORG_OR_USERNAME/DanceReachy.git
 ```
-git clone --recurse-submodules -b master https://github.com/pollen-robotics/Reachy2Teleoperation.git
-```
+Note: Git LFS must be enabled, as the project contains large binary assets.
 
-Make sure you have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your computer.
+## 2. Install GStreamer (Windows)
 
-Then, you will be able to open the project in Unity.
+If you are not using a bundled installer, install:
 
-In Unity Editor, check the settings are well set : go to Edit > Project Settings > XR Plugin Management, and check that your device is selected. 
+- GStreamer Windows Runtime (x86_64)
+- GStreamer Development Files (x86_64)
 
-## Usage
+After installation, ensure that the following path is present in your system PATH variable:
 
-This is the quick-start documentation. For a detailed manual, please visit the [main documentation website](https://pollen-robotics.github.io/reachy2-docs/teleoperation/).
+C:\gstreamer\1.0\msvc_x86_64\bin
 
-Teleoperating a robot takes place in three basic steps:
+Reboot the system after installation.
 
-### 1. Connect to a robot
+## 3. Open the Project in Unity
 
-The first step is to select the robot you want to control. For that you'll need the IP address of the robot (please refer to the [robot documentation](https://pollen-robotics.github.io/reachy2-docs/teleoperation/getting-started-teleoperation/connect-reachy2/) for the first connection). Press *new robot button* and add your robot.
+- Open **Unity Hub**
+- Select **Unity LTS 2022.3**
+- Open the cloned project directory
 
-<p align="center"> 
-    <img src="Docs/img/change_robot.jpg" alt="change robot" width='40%; margin-right: 10px;'/>
-    <img src="Docs/img/select_robot.jpg" alt="select robot" width='40%'/>
-</p>
+In the Unity Editor:
 
-Note that there's a built-in virtual robot for local testing of the application interface. 
+- Go to **Edit → Project Settings → XR Plugin Management**
+- Enable the plugin corresponding to your VR/MR headset
 
-### 2. Get ready for the teleoperation
+---
 
-This step checks that the connection to the robot is fine, and allows to set various parameters. Side menus (status, help, settings) can be opened by clicking on the related icons. You can change the different parameters according to what you want to do in teleoperation : you can set your height, navigation features, the gripper control, etc. 
+## Running the System
 
-Once you are ready, press the *Ready* button and then hold down the A button to take control of the robot.
+### 1. Connect to the Robot
 
-*Please not that A and X refers to the buttons of the Oculus controllers. They may differ on your device.*
+- Ensure the Reachy 2 robot is powered on and connected to the same network
+- Obtain the robot’s IP address
+- Enter the IP address in the application to establish a connection
 
-<p align="center"> 
-    <img src="Docs/img/mirror1.png" alt="mirror1" height='200; margin-right: 10px;'/>
-    <img src="Docs/img/mirror2.jpg" alt="mirror2" height='200; margin-right: 10px;'/>
-    <img src="Docs/img/mirror3.png" alt="mirror3" height='200; margin-right: 10px;'/>
-    <img src="Docs/img/mirror4.png" alt="mirror4" height='200'/>
-</p>
+A virtual robot is also available for local testing without hardware.
+
+### 2. Select an Interaction Mode
+
+From the main menu, choose one of the following modes:
+
+- **Dance as Reachy** – live expressive teleoperation
+- **Dance after Reachy** – observe and imitate a prerecorded dance routine
+- **Tabletop Game** – recreate a target block configuration using teleoperation
+
+Each mode reuses the same underlying teleoperation pipeline with mode-specific logic.
+
+### 3. Safety Notes
+
+- The system applies basic safety constraints such as joint limits and unreachable pose rejection
+- Collision detection and avoidance are not implemented
+- Teleoperation modes should only be used in
 
 
-### 3. Take control!
-
-You are then in the teleoperation view, but can only use the head and the mobile base.
-1. Check the robot surroudings to make sure there is no obstacle or people around. 
-2. Use the mobile base to get to a more appropriate location to start if needed.
-3. Finally press A to take control of the arms.
-
-You are now controlling Reachy! Press and hold A to return to the previous step. 
-<p align="center"> 
-    <img src="Docs/img/teleop.png" alt="teleop_view" width='60%'/>
-</p>
-
-## Issues / Contributions
-
-If you have any problem, you can create an issue on GitHub or send a message on our [forum](https://forum.pollen-robotics.com/c/users/vr-tele-operation/6). 
-
-### Gstreamer Log files
-
-The webRTC plugin is based on Gstreamer which ships with its own [logging system](https://gstreamer.freedesktop.org/documentation/tutorials/basic/debugging-tools.html?gi-language=c). To enable gstreamer logging, you need to set these two environment variables:
-```
-GST_DEBUG_FILE=C:\Users\<UserName>\gstreamer.log
-GST_DEBUG=3
-```
-*Note that they are already set in the built version (see [Installer/launch.bat](Installer/launch.bat))*
