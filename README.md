@@ -48,7 +48,7 @@ The system was evaluated during a **live public demonstration** and through post
 ### 1. Clone the Repository
 
 ```bash
-git clone --recurse-submodules https://github.com/YOUR_ORG_OR_USERNAME/DanceReachy.git
+git clone --recurse-submodules -b app_flow https://github.com/therealbeni/Reachy2Teleoperation.git
 ```
 Note: Git LFS must be enabled, as the project contains large binary assets.
 
@@ -98,9 +98,49 @@ From the main menu, choose one of the following modes:
 
 Each mode reuses the same underlying teleoperation pipeline with mode-specific logic.
 
-### 3. Safety Notes
+## 3. Safety Notes
 
 - The system applies basic safety constraints such as joint limits and unreachable pose rejection
+- Collision detection and avoidance are **not implemented**
+- Teleoperation modes should only be used in controlled environments and with experienced supervision
+- Users are shown safety instructions in mixed reality before robot motion begins in prerecorded modes
+
+---
+
+## Evaluation
+
+The system was evaluated during a **live public demonstration**.  
+User feedback was collected through pre- and post-demo questionnaires focusing on:
+
+- Usability and intuitiveness
+- Enjoyment and engagement
+- Tracking quality and motion comfort
+
+The evaluation highlights strong immediate usability and engagement, as well as limitations related to latency, motion sickness, and safety constraints.
+
+---
+
+## Code Structure
+
+- `Assets/` – Unity assets, scenes, and scripts
+- `Scripts/` – Interaction logic, teleoperation control, and game modes
+- `Streaming/` – GStreamer-based communication components
+- `Docs/` – Supplementary documentation and images
+
+---
+
+## Acknowledgements
+
+This project builds on the official Reachy 2 teleoperation stack provided by **Pollen Robotics**.  
+All project-specific extensions, interaction modes, and refactoring were developed as part of this semester project.
+
+---
+
+## Disclaimer
+
+This project is intended for research, education, and demonstration purposes only.  
+It is not designed for autonomous operation or unsupervised use.
+
 - Collision detection and avoidance are not implemented
 - Teleoperation modes should only be used in
 
